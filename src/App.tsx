@@ -5,6 +5,7 @@ import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import Icon from '@mdi/react';
 import Footer from './assets/components/Footer';
 
+export default function App() {
   return (
     <>
       <HeroGraphic
