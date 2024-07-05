@@ -1,12 +1,11 @@
 import { mdiGavel, mdiHandshake, mdiScaleBalance } from '@mdi/js';
 import HeroGraphic from './components/HeroGraphic'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import Icon from '@mdi/react';
 
 function App() {
   
-
   return (
     <>
       <HeroGraphic
@@ -90,15 +89,12 @@ function App() {
                     <h3 className='text-primary text-center'>Equality</h3>
 
                     <p>
-                      We believe in doing what is right. We value standing up for
-                      those in need, and using our legal skills to help those in need of assistance.
-                      With A.L Campbell Law Office, you are in good hands.
+                      Believing in equality means recognizing and valuing the inherent dignity and worth of every individual, regardless of their background, identity, or circumstances. 
+                      It involves advocating for fair treatment, opportunities, and rights for all people, fostering a society where everyone has the chance to thrive and contribute.
                     </p>
 
                     <p>
-                      We believe in doing what is right. We value standing up for
-                      those in need, and using our legal skills to help those in need of assistance.
-                      With A.L Campbell Law Office, you are in good hands.
+                      Embracing equality is essential for building inclusive communities and a just world where diversity is celebrated and everyone can reach their full potential.
                     </p>
                   </Col>
                 </Row>
@@ -107,7 +103,7 @@ function App() {
             </Card>
           </Col>
 
-          <Col lg={4} className='mb-4'>
+          <Col lg={4} className='mb-4 grow-hover'>
             <Card className="shadow h-100">
 
               <Container>
@@ -123,9 +119,7 @@ function App() {
                     <h3 className='text-primary text-center'>Honesty</h3>
 
                     <p>
-                      We believe in doing what is right. We value standing up for
-                      those in need, and using our legal skills to help those in need of assistance.
-                      With A.L Campbell Law Office, you are in good hands.
+                    Honesty fosters trust and integrity, creating strong, transparent relationships. It involves being truthful and sincere, even when it's challenging, and always valuing truth over deceit.
                     </p>
                   </Col>
                 </Row>
@@ -140,12 +134,80 @@ function App() {
           <hr/>
         </Row>
 
-        <Row>
+        <Row className="mb-4">
           <Col lg={8}>
             <p>
               We are happy to offer our legal services in any of the following areas. Click on any of the cards to learn more about
               our team, the services we offer, and some frequently asked questions related to the legal field
             </p>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col lg={4} className="mb-4 grow-hover">
+            <Card className="shadow">
+              <Card.Img variant='top' src="real-estate-card-photo.jpg"/>
+
+              {/* <Card.Header className="text-primary">
+                <h6 className="fw-bold">Real Estate</h6>
+              </Card.Header> */}
+
+              <Card.Body>
+
+                <Card.Title className="text-primary fw-bold">
+                  Real Estate
+                </Card.Title>
+                <p>
+                  Whether you're buying, selling, or have any other questions related to real estate law, we're happy to help!
+                </p>
+
+                <Button className="w-50 fw-bold" variant="primary">Learn More</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col lg={4} className="mb-4 grow-hover">
+            <Card className="shadow">
+              <Card.Img variant='top' src="family-law-card-photo.jpg"/>
+
+              {/* <Card.Header className="text-primary">
+                <h6 className="fw-bold">Real Estate</h6>
+              </Card.Header> */}
+
+              <Card.Body>
+
+                <Card.Title className="text-primary fw-bold">
+                  Family Law
+                </Card.Title>
+                <p>
+                  Family can be complicated. Our team of family law experts will support you through any family law situation you may be in.
+                </p>
+
+                <Button className="w-50 fw-bold" variant="primary">Learn More</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col lg={4} className="mb-4">
+            <Card className="shadow">
+              <Card.Img variant='top' src="immigration-law-card-photo.jpg"/>
+
+              {/* <Card.Header className="text-primary">
+                <h6 className="fw-bold">Real Estate</h6>
+              </Card.Header> */}
+
+              <Card.Body>
+
+                <Card.Title className="text-primary fw-bold">
+                  Immigration Law
+                </Card.Title>
+                <p>
+                  Whether you're buying, selling, or have any other questions related to real estate law, we're happy to help!
+                </p>
+
+                <Button className="w-50 fw-bold" variant="primary">Learn More</Button>
+              </Card.Body>
+            </Card>
           </Col>
         </Row>
       </Container>
