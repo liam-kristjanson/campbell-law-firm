@@ -1,19 +1,32 @@
-import { mdiGavel, mdiHandshake, mdiScaleBalance } from '@mdi/js';
-import HeroGraphic from './components/HeroGraphic'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+
 import Icon from '@mdi/react';
-import Footer from './assets/components/Footer';
+import { mdiGavel, mdiHandshake, mdiScaleBalance } from '@mdi/js';
+
+import NavBar from '../components/NavBar';
+import useNavBar from '../components/hooks/useNavBar';
+
+import HeroGraphic from '../components/HeroGraphic';
+
+import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+
+export default function Home() {
+  const {showMenu, handleMenuShow, handleMenuHide} = useNavBar();
 
   return (
     <>
+      <NavBar
+        showMenu={showMenu}
+        menuHideHandler={handleMenuHide}
+        menuShowHandler={handleMenuShow}
+      />
+
       <HeroGraphic
         graphicText=' A.L Campbell Law Office'
         iconPath={mdiScaleBalance}
         imageSource='book-header-cropped.jpg'
       />
 
-      
       <Container>
         <Row>
           <Col>
@@ -46,7 +59,7 @@ import Footer from './assets/components/Footer';
 
         <Row className='mb-5'>
           <Col lg={4} className='mb-4'>
-            <Card className="shadow h-100">
+            <Card className='shadow h-100'>
 
               <Container>
                 <Row className='d-flex justify-content-center'>
@@ -73,7 +86,7 @@ import Footer from './assets/components/Footer';
           </Col>
 
           <Col lg={4} className='mb-4'>
-            <Card className="shadow h-100">
+            <Card className='shadow h-100'>
 
               <Container>
                 <Row className='d-flex justify-content-center'>
@@ -103,7 +116,7 @@ import Footer from './assets/components/Footer';
           </Col>
 
           <Col lg={4} className='mb-4 grow-hover'>
-            <Card className="shadow h-100">
+            <Card className='shadow h-100'>
 
               <Container>
                 <Row className='d-flex justify-content-center'>
@@ -129,11 +142,11 @@ import Footer from './assets/components/Footer';
         </Row>
 
         <Row>
-          <h1 className="text-primary">Areas of practice</h1>
+          <h1 className='text-primary'>Areas of practice</h1>
           <hr/>
         </Row>
 
-        <Row className="mb-4">
+        <Row className='mb-4'>
           <Col lg={8}>
             <p>
               We are happy to offer our legal services in any of the following areas. Click on any of the cards to learn more about
@@ -143,76 +156,73 @@ import Footer from './assets/components/Footer';
         </Row>
 
         <Row>
-          <Col lg={4} className="mb-4 grow-hover">
-            <Card className="shadow">
-              <Card.Img variant='top' src="real-estate-card-photo.jpg"/>
+          <Col lg={4} className='mb-4 grow-hover'>
+            <Card className='shadow'>
+              <Card.Img variant='top' src='real-estate-card-photo.jpg'/>
 
-              {/* <Card.Header className="text-primary">
-                <h6 className="fw-bold">Real Estate</h6>
+              {/* <Card.Header className='text-primary'>
+                <h6 className='fw-bold'>Real Estate</h6>
               </Card.Header> */}
 
               <Card.Body>
 
-                <Card.Title className="text-primary fw-bold">
+                <Card.Title className='text-primary fw-bold'>
                   Real Estate
                 </Card.Title>
                 <p>
                   Whether you're buying, selling, or have any other questions related to real estate law, we're happy to help!
                 </p>
 
-                <Button className="w-50 fw-bold" variant="primary">Learn More</Button>
+                <Button className='w-50 fw-bold' variant='primary'>Learn More</Button>
               </Card.Body>
             </Card>
           </Col>
 
-          <Col lg={4} className="mb-4 grow-hover">
-            <Card className="shadow">
-              <Card.Img variant='top' src="family-law-card-photo.jpg"/>
+          <Col lg={4} className='mb-4 grow-hover'>
+            <Card className='shadow'>
+              <Card.Img variant='top' src='family-law-card-photo.jpg'/>
 
-              {/* <Card.Header className="text-primary">
-                <h6 className="fw-bold">Real Estate</h6>
+              {/* <Card.Header className='text-primary'>
+                <h6 className='fw-bold'>Real Estate</h6>
               </Card.Header> */}
 
               <Card.Body>
 
-                <Card.Title className="text-primary fw-bold">
+                <Card.Title className='text-primary fw-bold'>
                   Family Law
                 </Card.Title>
                 <p>
                   Family can be complicated. Our team of family law experts will support you through any family law situation you may be in.
                 </p>
 
-                <Button className="w-50 fw-bold" variant="primary">Learn More</Button>
+                <Button className='w-50 fw-bold' variant='primary'>Learn More</Button>
               </Card.Body>
             </Card>
           </Col>
 
-          <Col lg={4} className="mb-4">
-            <Card className="shadow">
-              <Card.Img variant='top' src="immigration-law-card-photo.jpg"/>
+          <Col lg={4} className='mb-4'>
+            <Card className='shadow'>
+              <Card.Img variant='top' src='immigration-law-card-photo.jpg'/>
 
-              {/* <Card.Header className="text-primary">
-                <h6 className="fw-bold">Real Estate</h6>
+              {/* <Card.Header className='text-primary'>
+                <h6 className='fw-bold'>Real Estate</h6>
               </Card.Header> */}
 
               <Card.Body>
 
-                <Card.Title className="text-primary fw-bold">
+                <Card.Title className='text-primary fw-bold'>
                   Immigration Law
                 </Card.Title>
                 <p>
                   Whether you're buying, selling, or have any other questions related to real estate law, we're happy to help!
                 </p>
 
-                <Button className="w-50 fw-bold" variant="primary">Learn More</Button>
+                <Button className='w-50 fw-bold' variant='primary'>Learn More</Button>
               </Card.Body>
             </Card>
           </Col>
         </Row>
       </Container>
-
-      <Footer/>  
-      
-    </>
-  )
+        </>
+    )
 }
