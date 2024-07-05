@@ -3,6 +3,7 @@ import HeroGraphic from './components/HeroGraphic'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import Icon from '@mdi/react';
+import Footer from './assets/components/Footer';
 
 function App() {
   
@@ -211,6 +212,8 @@ function App() {
           </Col>
         </Row>
       </Container>
+
+      <Footer/>  
       
     </>
   )
