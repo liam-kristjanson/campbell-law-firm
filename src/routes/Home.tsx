@@ -9,6 +9,7 @@ import useNavBar from '../components/hooks/useNavBar';
 import HeroGraphic from '../components/HeroGraphic';
 
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import Footer from '../assets/components/Footer';
 
 export default function Home() {
   const {showMenu, handleMenuShow, handleMenuHide} = useNavBar();
@@ -222,7 +223,9 @@ export default function Home() {
             </Card>
           </Col>
         </Row>
+        
       </Container>
+       <Footer/>
         </>
     )
 }

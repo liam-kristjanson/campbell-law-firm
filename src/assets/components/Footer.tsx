@@ -17,7 +17,7 @@ return(
 
 <>
     <footer className=" justify-content-evenly align-items-center bg-primary text-light ps-3 ">
-        <div className="d-flex  mx-auto justify-content-start position-relative">
+        <div className="d-flex  mx-auto justify-content-start position-relative mt-5">
             <h3 className=" pe-auto fw-bolder" role="button"> <VscLaw /> Campbell Law services</h3>
         </div>
         <Container>
@@ -26,7 +26,7 @@ return(
                     <div className=" d-flex pe-auto text-sm-center mt-5">
                         <div>    
                             <p>Campbell Law firms is known for providing high – end solution either in legal or in consultancy services in order to meet the clients’ interests or to building a strong and long term relationship.</p>
-                            <ul className=" link-underline-opacity-75-hover" style={myStyle} >
+                            <ul className=" link-underline-opacity-75-hover text-decoration-underline" style={myStyle} >
                                 <li> <Icon path={mdiCellphoneBasic} size={1.3} /> 204-555-6666</li>
                                 <li> <Icon path={mdiFax} size={1.3} /> 431-555-7878</li>
                                 <li> <Icon path={mdiEmailFastOutline} size={1.3} className="text-end" />c@campbol.ca</li>
