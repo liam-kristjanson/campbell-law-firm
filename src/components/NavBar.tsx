@@ -10,6 +10,7 @@ interface NavbarProps {
   menuShowHandler: () => void;
   menuHideHandler: () => void;
   showMenu: boolean;
+  selectedRoute: string;
 }
 
 export default function NavBar(props: NavbarProps) {
@@ -17,10 +18,26 @@ export default function NavBar(props: NavbarProps) {
 
   const links = [
     {
+      route: "/",
+      text: "Home",
+    },
+    {
+      route: "/about",
+      text: "About",
+    },
+    {
       route: "/contact",
       text: "Contact",
     },
   ];
+
+  function findLinkClass(linkText: string) : string {
+    if (linkText === props.selectedRoute){
+      return 'primary'
+    }
+
+    return 'dark'
+  }
 
   return (
     <>
@@ -31,27 +48,29 @@ export default function NavBar(props: NavbarProps) {
           className='link-primary'
           role='button'
           >
-            <h3>
+            <h4>
               <Icon path={mdiScaleBalance} size={1.3} className='align-bottom'/> A.L Campbell Law Office
-            </h3>
+            </h4>
           </Nav.Link>
         </Nav.Item>
 
-        <Nav.Item className='d-none d-md-flex align-items-center text-center align-center'>
+        <Nav.Item className='d-none d-md-flex my-auto align-center'>
             {links.map((link: {route: string, text: string}) => (
               <Nav.Link
               onClick={() => navigate(link.route)}
-              className='my-auto link-dark'
+              className={'my-auto link-' + findLinkClass(link.route)}
               role='button'
               >
+              <h5 className={'border-bottom border-' + findLinkClass(link.route)}>
                 {link.text}
+              </h5>
               </Nav.Link>
             ))}
         </Nav.Item>
 
         <div id='menu-button-sm' className='d-md-none pe-2'>
           <a onClick={() => props.menuShowHandler()}
-          className='text-primary'
+          className='link-primary'
           role='button'
           >
             <Icon path={mdiMenu} size={1.3}/>
@@ -71,10 +90,10 @@ export default function NavBar(props: NavbarProps) {
                 <Nav.Item>
                   <Nav.Link
                   onClick={() => navigate(link.route)}
-                  className='text-primary'
+                  className='link-primary mb-4'
                   >
                     <h5>
-                      {link.text}
+                      <span className="border-bottom border-primary">{link.text}</span>
                     </h5>
                   </Nav.Link>
                 </Nav.Item>

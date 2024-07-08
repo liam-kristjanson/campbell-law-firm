@@ -11,7 +11,8 @@ import HeroGraphic from '../components/HeroGraphic';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 
 export default function Home() {
-  const {showMenu, handleMenuShow, handleMenuHide} = useNavBar();
+  const { showMenu, handleMenuShow, handleMenuHide } = useNavBar();
+  const route = "/";
 
   return (
     <>
@@ -19,6 +20,7 @@ export default function Home() {
         showMenu={showMenu}
         menuHideHandler={handleMenuHide}
         menuShowHandler={handleMenuShow}
+        selectedRoute={route}
       />
 
       <HeroGraphic

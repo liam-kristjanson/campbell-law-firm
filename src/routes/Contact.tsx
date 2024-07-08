@@ -11,6 +11,7 @@ import { Col, Container, Nav, Row } from 'react-bootstrap';
 
 export default function Contact() {
     const {showMenu, handleMenuShow, handleMenuHide} = useNavBar();
+    const route = "/contact";
 
     return (
         <>
@@ -18,6 +19,7 @@ export default function Contact() {
                 showMenu={showMenu}
                 menuHideHandler={handleMenuHide}
                 menuShowHandler={handleMenuShow}
+                selectedRoute={route}
             />
 
             <HeroGraphic
