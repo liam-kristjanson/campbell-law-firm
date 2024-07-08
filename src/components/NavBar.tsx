@@ -4,7 +4,7 @@ import Icon from '@mdi/react';
 import { mdiMenu, mdiScaleBalance } from '@mdi/js';
 
 import { Col, Container, Nav, Offcanvas, Row } from 'react-bootstrap'
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 interface NavbarProps {
   menuShowHandler: () => void;
