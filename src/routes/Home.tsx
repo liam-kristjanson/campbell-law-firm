@@ -15,10 +15,16 @@ import FamilyLawCardPhoto from "../assets/family-law-card-photo.jpg";
 import RealEstateLawCardPhoto from "../assets/real-estate-card-photo.jpg";
 import ImmigrationLawCardPhoto from "../assets/immigration-law-card-photo.jpg";
 import Footer from "../components/Footer";
+<<<<<<< Updated upstream
+=======
+import ContactForm from '../components/ContactForm';
+import { useNavigate } from 'react-router-dom';
+>>>>>>> Stashed changes
 
 export default function Home() {
   const { showMenu, handleMenuShow, handleMenuHide } = useNavBar();
   const route = "/";
+  const navigate = useNavigate();
 
   const [mailtoHref, setMailtoHref] = useState<string>("");
   const [customerName, setCustomerName] = useState<string>("");
@@ -211,7 +217,7 @@ export default function Home() {
                   Whether you're buying, selling, or have any other questions related to real estate law, we're happy to help!
                 </p>
 
-                <Button className='w-50 fw-bold' variant='primary'>Learn More</Button>
+                <Button onClick={() => {navigate('/practice/real-estate')}}className='w-50 fw-bold' variant='primary'>Learn More</Button>
               </Card.Body>
             </Card>
           </Col>
