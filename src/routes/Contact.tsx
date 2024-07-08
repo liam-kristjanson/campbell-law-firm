@@ -8,6 +8,7 @@ import useNavBar from '../components/hooks/useNavBar';
 
 import HeroGraphic from '../components/HeroGraphic';
 import { Col, Container, Nav, Row } from 'react-bootstrap';
+import Footer from '../components/Footer';
 
 export default function Contact() {
     const {showMenu, handleMenuShow, handleMenuHide} = useNavBar();
@@ -74,6 +75,8 @@ export default function Contact() {
                     </Col>
                 </Row>
             </Container>
+
+            <Footer/>
         </>
     )
 }

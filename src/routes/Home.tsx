@@ -8,11 +8,49 @@ import useNavBar from '../components/hooks/useNavBar';
 
 import HeroGraphic from '../components/HeroGraphic';
 
-import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import { Button, Card, Col, Container, Form, Row } from 'react-bootstrap';
+import CustomerReview from '../components/CustomerReview';
+import { useState } from 'react';
+
+import BookHeader from "../assets/book-header-cropped.jpg";
+import FamilyLawCardPhoto from "../assets/family-law-card-photo.jpg";
+import RealEstateLawCardPhoto from "../assets/real-estate-card-photo.jpg";
+import ImmigrationLawCardPhoto from "../assets/immigration-law-card-photo.jpg";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const { showMenu, handleMenuShow, handleMenuHide } = useNavBar();
   const route = "/";
+
+  const [mailtoHref, setMailtoHref] = useState<string>("");
+  const [customerName, setCustomerName] = useState<string>("");
+  const [customerMessage, setCustomerMessage] = useState<string>("");
+
+  const contactEmail = "example@email.com";
+
+  function handleCustomerNameChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    const newCustomerName = e.target.value;
+
+    setCustomerName(newCustomerName);
+
+    setMailtoHref(encodeURI(
+      "mailto:" + contactEmail
+      + "?subject=" + newCustomerName + " - Customer Inquiry"
+      + "&body=" + customerMessage
+    ));
+  }
+
+  function handleCustomerMessageChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    const newCustomerMessage = e.target.value;
+
+    setCustomerMessage(newCustomerMessage);
+
+    setMailtoHref(encodeURI(
+      "mailto:" + contactEmail
+      + "?subject=" + customerName + " - Customer Inquiry"
+      + "&body=" + newCustomerMessage
+    ));
+  }
 
   return (
     <>
@@ -26,7 +64,7 @@ export default function Home() {
       <HeroGraphic
         graphicText=' A.L Campbell Law Office'
         iconPath={mdiScaleBalance}
-        imageSource='book-header-cropped.jpg'
+        imageSource={BookHeader}
       />
 
       <Container>
@@ -157,10 +195,10 @@ export default function Home() {
           </Col>
         </Row>
 
-        <Row>
+        <Row className="mb-5">
           <Col lg={4} className='mb-4 grow-hover'>
             <Card className='shadow'>
-              <Card.Img variant='top' src='real-estate-card-photo.jpg'/>
+              <Card.Img variant='top' src={RealEstateLawCardPhoto}/>
 
               {/* <Card.Header className='text-primary'>
                 <h6 className='fw-bold'>Real Estate</h6>
@@ -169,7 +207,7 @@ export default function Home() {
               <Card.Body>
 
                 <Card.Title className='text-primary fw-bold'>
-                  Real Estate
+                  Real Estate Law
                 </Card.Title>
                 <p>
                   Whether you're buying, selling, or have any other questions related to real estate law, we're happy to help!
@@ -182,7 +220,7 @@ export default function Home() {
 
           <Col lg={4} className='mb-4 grow-hover'>
             <Card className='shadow'>
-              <Card.Img variant='top' src='family-law-card-photo.jpg'/>
+              <Card.Img variant='top' src={FamilyLawCardPhoto}/>
 
               {/* <Card.Header className='text-primary'>
                 <h6 className='fw-bold'>Real Estate</h6>
@@ -204,7 +242,7 @@ export default function Home() {
 
           <Col lg={4} className='mb-4'>
             <Card className='shadow'>
-              <Card.Img variant='top' src='immigration-law-card-photo.jpg'/>
+              <Card.Img variant='top' src={ImmigrationLawCardPhoto}/>
 
               {/* <Card.Header className='text-primary'>
                 <h6 className='fw-bold'>Real Estate</h6>
@@ -224,7 +262,74 @@ export default function Home() {
             </Card>
           </Col>
         </Row>
+
+        <Row>
+          <h1 className='text-primary'>Customer Testimonials</h1>
+          <hr/>
+        </Row>
+
+        <Row className="mb-5">
+          <Col lg={3}>
+            <CustomerReview/>
+          </Col>
+
+          <Col lg={3}>
+            <CustomerReview/>
+          </Col>
+
+          <Col lg={3}>
+            <CustomerReview/>
+          </Col>
+
+          <Col lg={3}>
+            <CustomerReview/>
+          </Col>
+        </Row>
+
+        <Row>
+          <h1 className='text-primary'>
+            Get in Touch
+          </h1>
+          <hr/>
+        </Row>
+
+        <Row>
+          <Col xl={8}>
+            <p>
+              Have any questions? Feel free to reach out to us using the form below, and one of our team members will reach out to you to arrange a no-obilgation consultation.
+            </p>
+          </Col>
+        </Row>
+
+        <Row className='mb-5'>
+          <Col>
+            <Card className='shadow'>
+
+              <Card.Header>
+                Contact Information
+              </Card.Header>
+
+              <Card.Body>
+                <Form>
+                  <Form.Group className="mb-3">
+                    <Form.Label>Name</Form.Label>
+                    <Form.Control onChange={(e) => {handleCustomerNameChange(e)}}type='text' name='name' placeholder='Enter your name'></Form.Control>
+                  </Form.Group>
+
+                  <Form.Group className="mb-3">
+                    <Form.Label>Message</Form.Label>
+                    <Form.Control onChange={(e) => {handleCustomerMessageChange(e)}} as='textarea' name='message' placeholder='Enter your message to us' rows={8} cols={30}/>
+                  </Form.Group>
+
+                  <a className="btn btn-primary w-100 fw-bold btn-lg" href={mailtoHref}>Submit</a>
+                </Form>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
       </Container>
-        </>
+
+      <Footer/>
+    </>
     )
 }

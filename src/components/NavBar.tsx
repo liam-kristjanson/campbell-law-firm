@@ -22,7 +22,7 @@ export default function NavBar(props: NavbarProps) {
       text: "Home",
     },
     {
-      route: "/about",
+      route: "/about-us",
       text: "About",
     },
     {
@@ -78,7 +78,7 @@ export default function NavBar(props: NavbarProps) {
         </div>
       </Nav>
 
-      <div style={{marginBottom: '75px'}}></div>
+      <div style={{marginBottom: '70px'}}></div>
 
       <Offcanvas show={props.showMenu} onHide={props.menuHideHandler} placement='end'>
             <Offcanvas.Header closeButton>
