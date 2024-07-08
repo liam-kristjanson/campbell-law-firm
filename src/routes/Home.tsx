@@ -1,5 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 import Icon from '@mdi/react';
 import { mdiGavel, mdiHandshake, mdiScaleBalance } from '@mdi/js';
 
@@ -269,19 +267,19 @@ export default function Home() {
         </Row>
 
         <Row className="mb-5">
-          <Col lg={3}>
+          <Col xxl={3} md={6} className="mb-3">
             <CustomerReview/>
           </Col>
 
-          <Col lg={3}>
+          <Col xxl={3} md={6} className="mb-3">
             <CustomerReview/>
           </Col>
 
-          <Col lg={3}>
+          <Col xxl={3} md={6} className="mb-3">
             <CustomerReview/>
           </Col>
 
-          <Col lg={3}>
+          <Col xxl={3} md={6} className="mb-3">
             <CustomerReview/>
           </Col>
         </Row>
@@ -331,5 +329,5 @@ export default function Home() {
 
       <Footer/>
     </>
-    )
+  )
 }

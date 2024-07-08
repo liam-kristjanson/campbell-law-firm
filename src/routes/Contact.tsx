@@ -1,5 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 import Icon from '@mdi/react';
 import { mdiFacebook, mdiFax, mdiHomeCity, mdiPhone, mdiPhoneClassic } from '@mdi/js';
 
