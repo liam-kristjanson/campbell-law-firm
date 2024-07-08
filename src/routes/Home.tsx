@@ -16,6 +16,7 @@ import BookHeader from "../assets/book-header-cropped.jpg";
 import FamilyLawCardPhoto from "../assets/family-law-card-photo.jpg";
 import RealEstateLawCardPhoto from "../assets/real-estate-card-photo.jpg";
 import ImmigrationLawCardPhoto from "../assets/immigration-law-card-photo.jpg";
+import Footer from "../components/Footer";
 
 export default function Home() {
   const {showMenu, handleMenuShow, handleMenuHide} = useNavBar();
@@ -325,6 +326,8 @@ export default function Home() {
           </Col>
         </Row>
       </Container>
+
+      <Footer/>
     </>
     )
 }
