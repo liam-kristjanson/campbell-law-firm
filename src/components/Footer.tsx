@@ -73,9 +73,9 @@ return(
                 <h5>Areas of Practice</h5>
 
                     <ul className="d-flex flex-column gap-3 fw-bold text-decoration-underline">
-                        <li role="button">Real Estate Law</li>
-                        <li role="button">Family Law</li>
-                        <li role="button">Immigration Law</li>
+                        <li role="button" onClick={() => {navigate("/practice-areas/real-estate-law"); window.scrollTo(0,0)}}>Real Estate Law</li>
+                        <li role="button" onClick={() => {navigate("/practice-areas/family-law"); window.scrollTo(0,0)}}>Family Law</li>
+                        <li role="button" onClick={() => {navigate("/practice-areas/immigration-law"); window.scrollTo(0,0)}}>Immigration Law</li>
                     </ul>
 
                     {/* <div className="d-flex justify-content-evenly text-light mt-5">
