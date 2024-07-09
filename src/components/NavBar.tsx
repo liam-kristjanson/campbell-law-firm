@@ -137,7 +137,8 @@ export default function NavBar(props: NavbarProps) {
         <div id='menu-button-sm' className='d-md-none pe-2'>
           <a onClick={() => props.menuShowHandler()}
           className='link-primary'
-          role='button'
+          role='menu'
+          id="navigation-menu-show"
           >
             <Icon path={mdiMenu} size={1.3}/>
           </a>

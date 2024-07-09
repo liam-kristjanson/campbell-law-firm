@@ -17,7 +17,7 @@ const navigate = useNavigate()
 
 
 return(
-    <footer className="bg-primary text-light p-0 m-0 container-fluid">
+    <footer className="bg-primary text-white p-0 m-0 container-fluid">
         
         {/* <Container className="w-100 p-0 m-0"> */}
             <Row className="p-3">
@@ -30,9 +30,9 @@ return(
 
                     <h5>Info</h5>
                     <ul style={myStyle} className="d-flex flex-column align-items-start ps-0">
-                        <li> <Icon path={mdiCellphoneBasic} size={1.3} /> 204-291-6312</li>
-                        <li> <Icon path={mdiFax} size={1.3} /> 204-817-3430</li>
-                        <li> <Icon path={mdiEmailFastOutline} size={1.3}/> campbell@example.com</li> 
+                        <li><Icon path={mdiCellphoneBasic} size={1.3} /> 204-291-6312</li>
+                        <li><Icon path={mdiFax} size={1.3} /> 204-817-3430</li>
+                        <li><Icon path={mdiEmailFastOutline} size={1.3}/> campbell@example.com</li> 
                         <li><Icon path={mdiMapMarkerRadiusOutline} size={1.3} /> 2-430 River Avenue, Winnipeg, MB R3L 0C6</li>
                     </ul>
                 </Col>
@@ -41,9 +41,9 @@ return(
                     <h5>Quick Links</h5>
 
                     <ul className="d-flex flex-column gap-3 fw-bold text-decoration-underline">
-                        <li role="button" onClick={() => {window.scrollTo(0,0); navigate("/"); }}>Home</li>
-                        <li role="button" onClick={() => {window.scrollTo(0,0); navigate("/about-us")}}>About Us</li>
-                        <li role="button" onClick={() => {window.scrollTo(0,0); navigate("/contact");}}>Contact</li>
+                        <li className="hover-pointer" role="link" onClick={() => {window.scrollTo(0,0); navigate("/"); }}>Home</li>
+                        <li className="hover-pointer" role="link" onClick={() => {window.scrollTo(0,0); navigate("/about-us")}}>About Us</li>
+                        <li className="hover-pointer" role="link" onClick={() => {window.scrollTo(0,0); navigate("/contact");}}>Contact</li>
                     </ul>
                     
                     {/* <div className="d-flex justify-content-evenly text-light mt-5">
@@ -72,10 +72,10 @@ return(
 
                 <h5>Areas of Practice</h5>
 
-                    <ul className="d-flex flex-column gap-3 fw-bold text-decoration-underline">
-                        <li role="button" onClick={() => {window.scrollTo(0,0); navigate("/practice-areas/real-estate-law");}}>Real Estate Law</li>
-                        <li role="button" onClick={() => {window.scrollTo(0,0); navigate("/practice-areas/family-law");}}>Family Law</li>
-                        <li role="button" onClick={() => {window.scrollTo(0,0); navigate("/practice-areas/immigration-law"); window.scrollTo(0,0)}}>Immigration Law</li>
+                    <ul role="list" className="d-flex flex-column gap-3 fw-bold text-decoration-underline">
+                        <li className="hover-pointer" role="link" onClick={() => {window.scrollTo(0,0); navigate("/practice-areas/real-estate-law");}}>Real Estate Law</li>
+                        <li className="hover-pointer" role="link" onClick={() => {window.scrollTo(0,0); navigate("/practice-areas/family-law");}}>Family Law</li>
+                        <li className="hover-pointer" role="link" onClick={() => {window.scrollTo(0,0); navigate("/practice-areas/immigration-law"); window.scrollTo(0,0)}}>Immigration Law</li>
                     </ul>
 
                     {/* <div className="d-flex justify-content-evenly text-light mt-5">

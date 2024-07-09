@@ -5,3 +5,7 @@ a.dropdown-toggle.nav-link {
 div.primary a.dropdown-toggle.nav-link {
     color: var(--bs-primary);
 }
+
+.hover-pointer:hover {
+    cursor:pointer;
+}
