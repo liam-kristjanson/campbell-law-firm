@@ -41,9 +41,9 @@ return(
                     <h5>Quick Links</h5>
 
                     <ul className="d-flex flex-column gap-3 fw-bold text-decoration-underline">
-                        <li role="button" onClick={() => {navigate("/"); window.scrollTo(0,0)}}>Home</li>
-                        <li role="button" onClick={() => {navigate("/about-us"); window.scrollTo(0,0)}}>About Us</li>
-                        <li role="button" onClick={() => {navigate("/contact"); window.scrollTo(0,0)}}>Contact</li>
+                        <li role="button" onClick={() => {window.scrollTo(0,0); navigate("/"); }}>Home</li>
+                        <li role="button" onClick={() => {window.scrollTo(0,0); navigate("/about-us")}}>About Us</li>
+                        <li role="button" onClick={() => {window.scrollTo(0,0); navigate("/contact");}}>Contact</li>
                     </ul>
                     
                     {/* <div className="d-flex justify-content-evenly text-light mt-5">
