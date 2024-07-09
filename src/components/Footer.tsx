@@ -41,9 +41,9 @@ return(
                     <h5>Quick Links</h5>
 
                     <ul className="d-flex flex-column gap-3 fw-bold text-decoration-underline">
-                        <li><a className="hover-pointer text-white" onClick={() => {window.scrollTo(0,0); navigate("/"); }}>Home</a></li>
-                        <li><a className="hover-pointer text-white" onClick={() => {window.scrollTo(0,0); navigate("/about-us")}}>About Us</a></li>
-                        <li><a className="hover-pointer text-white" onClick={() => {window.scrollTo(0,0); navigate("/contact");}}>Contact</a></li>
+                        <li><a className="hover-pointer text-white" href="/" onClick={() => {window.scrollTo(0,0); navigate("/"); }}>Home</a></li>
+                        <li><a className="hover-pointer text-white" href="/about-us" onClick={() => {window.scrollTo(0,0); navigate("/about-us")}}>About Us</a></li>
+                        <li><a className="hover-pointer text-white" href="/contact" onClick={() => {window.scrollTo(0,0); navigate("/contact");}}>Contact</a></li>
                     </ul>
                     
                     {/* <div className="d-flex justify-content-evenly text-light mt-5">
@@ -73,9 +73,9 @@ return(
                 <h5>Areas of Practice</h5>
 
                     <ul className="d-flex flex-column gap-3 fw-bold text-decoration-underline">
-                        <li><a className="hover-pointer text-white" onClick={() => {window.scrollTo(0,0); navigate("/practice-areas/real-estate-law");}}>Real Estate Law</a></li>
-                        <li><a className="hover-pointer text-white" onClick={() => {window.scrollTo(0,0); navigate("/practice-areas/family-law");}}>Family Law</a></li>
-                        <li><a className="hover-pointer text-white" onClick={() => {window.scrollTo(0,0); navigate("/practice-areas/immigration-law"); window.scrollTo(0,0)}}>Immigration Law</a></li>
+                        <li><a className="hover-pointer text-white" href="/practice-areas/real-estate-law" onClick={() => {window.scrollTo(0,0); navigate("/practice-areas/real-estate-law");}}>Real Estate Law</a></li>
+                        <li><a className="hover-pointer text-white" href="/practice-areas/family-law" onClick={() => {window.scrollTo(0,0); navigate("/practice-areas/family-law");}}>Family Law</a></li>
+                        <li><a className="hover-pointer text-white" href="/practice-areas/immigration-law" onClick={() => {window.scrollTo(0,0); navigate("/practice-areas/immigration-law"); window.scrollTo(0,0)}}>Immigration Law</a></li>
                     </ul>
 
                     {/* <div className="d-flex justify-content-evenly text-light mt-5">
