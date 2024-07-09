@@ -169,7 +169,7 @@ export default function Home() {
         <Row className="mb-5">
           <Col lg={4} className='mb-4 grow-hover'>
             <Card className='shadow'>
-              <Card.Img variant='top' src={RealEstateLawCardPhoto}/>
+              <Card.Img variant='top' alt="Real Estate Law" src={RealEstateLawCardPhoto}/>
 
               {/* <Card.Header className='text-primary'>
                 <h6 className='fw-bold'>Real Estate</h6>
@@ -191,7 +191,7 @@ export default function Home() {
 
           <Col lg={4} className='mb-4 grow-hover'>
             <Card className='shadow'>
-              <Card.Img variant='top' src={FamilyLawCardPhoto}/>
+              <Card.Img variant='top' alt="Family Law" src={FamilyLawCardPhoto}/>
 
               {/* <Card.Header className='text-primary'>
                 <h6 className='fw-bold'>Real Estate</h6>
@@ -213,7 +213,7 @@ export default function Home() {
 
           <Col lg={4} className='mb-4'>
             <Card className='shadow'>
-              <Card.Img variant='top' src={ImmigrationLawCardPhoto}/>
+              <Card.Img variant='top' alt="Immigration Law" src={ImmigrationLawCardPhoto}/>
 
               {/* <Card.Header className='text-primary'>
                 <h6 className='fw-bold'>Real Estate</h6>
