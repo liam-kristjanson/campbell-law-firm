@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Icon from '@mdi/react';
 import { mdiMenu, mdiScaleBalance } from '@mdi/js';
 
-import { Nav, Offcanvas } from 'react-bootstrap'
+import { Nav, NavDropdown, Offcanvas } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom';
 
 interface NavbarProps {
@@ -13,10 +13,16 @@ interface NavbarProps {
   selectedRoute: string;
 }
 
+interface Route {
+  route?: string;
+  text: string;
+  childRoutes? : Route[];
+}
+
 export default function NavBar(props: NavbarProps) {
   const navigate = useNavigate();
 
-  const links = [
+  const links : Route[] = [
     {
       route: "/",
       text: "Home",
@@ -24,6 +30,23 @@ export default function NavBar(props: NavbarProps) {
     {
       route: "/about-us",
       text: "About",
+    },
+    {
+      text: "Practice Areas",
+      childRoutes: [
+        {
+          route: "/practice-areas/real-estate-law",
+          text: "Real Estate Law"
+        },
+        {
+          route: "/practice-areas/immigration-law",
+          text: "Immigration Law"
+        },
+        {
+          route: "practice-areas/family-law",
+          text: "Family Law"
+        },
+      ],
     },
     {
       route: "/contact",
@@ -55,16 +78,42 @@ export default function NavBar(props: NavbarProps) {
         </Nav.Item>
 
         <Nav.Item className='d-none d-md-flex my-auto align-center'>
-            {links.map((link: {route: string, text: string}) => (
-              <Nav.Link
-              onClick={() => navigate(link.route)}
-              className={'my-auto link-' + findLinkClass(link.route)}
-              role='button'
-              >
-              <h5 className={'border-bottom border-' + findLinkClass(link.route)}>
-                {link.text}
-              </h5>
-              </Nav.Link>
+            {links.map((link: Route) => (
+              link.route ? (
+                <h5>
+                  <Nav.Link
+                  onClick={() => navigate(link.route ?? "/")}
+                  className={'my-auto link-' + findLinkClass(link.route)}
+                  role='button'
+                  >
+                    <span className={'border-bottom border-' + findLinkClass(link.route ?? "/")}>
+                      {link.text}
+                    </span>
+                  </Nav.Link>
+                </h5>
+              ) : (
+                link.childRoutes ? (
+                  <h5>
+                    <NavDropdown
+                    title={link.text}
+                    menuVariant='light'
+                    className='my-auto link-dark'
+                    >
+                      {link.childRoutes.map((sublink: Route) => (
+                        <NavDropdown.Item
+                        onClick={() => navigate(sublink.route ?? "/")}
+                        className={'my-auto link-dark'}
+                        role='button'
+                        >
+                          {sublink.text}
+                        </NavDropdown.Item>
+                      ))}
+                    </NavDropdown>
+                  </h5>
+                ) : (
+                  <></>
+                )
+              )
             ))}
         </Nav.Item>
 
@@ -86,17 +135,36 @@ export default function NavBar(props: NavbarProps) {
             </Offcanvas.Header>
 
             <Offcanvas.Body>
-              {links.map((link: {route: string, text: string}) => (
-                <Nav.Item>
-                  <Nav.Link
-                  onClick={() => navigate(link.route)}
-                  className='link-primary mb-4'
-                  >
-                    <h5>
-                      <span className="border-bottom border-primary">{link.text}</span>
-                    </h5>
-                  </Nav.Link>
-                </Nav.Item>
+              {links.map((link : Route) => (
+                link.route ? (
+                  <Nav.Item>
+                    <Nav.Link
+                    onClick={() => navigate(link.route ?? "/")}
+                    className='link-primary mb-4'
+                    >
+                      <h5>
+                        <span className="border-bottom border-primary">{link.text}</span>
+                      </h5>
+                    </Nav.Link>
+                  </Nav.Item>
+                ) : (
+                  link.childRoutes ? (
+                    link.childRoutes.map((sublink: Route) => (
+                      <Nav.Item>
+                        <Nav.Link
+                        onClick={() => navigate(sublink.route ?? "/")}
+                        className='link-primary mb-4'
+                        >
+                          <h5>
+                            <span className="border-bottom border-primary">{sublink.text}</span>
+                          </h5>
+                        </Nav.Link>
+                      </Nav.Item>
+                    ))
+                  ) : (
+                    <></>
+                  )
+                )
               ))}
             </Offcanvas.Body>
         </Offcanvas>
