@@ -1,5 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 import Icon from '@mdi/react';
 import { mdiGavel, mdiHandshake, mdiScaleBalance } from '@mdi/js';
 
@@ -11,16 +9,19 @@ import HeroGraphic from '../components/HeroGraphic';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import CustomerReview from '../components/CustomerReview';
 
-import BookHeader from "../assets/book-header-cropped.jpg";
+import BookHeader from "../assets/book-header-croppedV2.jpg";
 import FamilyLawCardPhoto from "../assets/family-law-card-photo.jpg";
 import RealEstateLawCardPhoto from "../assets/real-estate-card-photo.jpg";
 import ImmigrationLawCardPhoto from "../assets/immigration-law-card-photo.jpg";
 import Footer from "../components/Footer";
 import ContactForm from '../components/ContactForm';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
   const { showMenu, handleMenuShow, handleMenuHide } = useNavBar();
   const route = "/";
+  
+  const navigate = useNavigate();
 
   return (
     <>
@@ -183,7 +184,7 @@ export default function Home() {
                   Whether you're buying, selling, or have any other questions related to real estate law, we're happy to help!
                 </p>
 
-                <Button className='w-50 fw-bold' variant='primary'>Learn More</Button>
+                <Button onClick={() => {navigate('/practice-areas/real-estate'); window.scrollTo(0,0)}}className='w-50 fw-bold' variant='primary'>Learn More</Button>
               </Card.Body>
             </Card>
           </Col>
@@ -239,19 +240,19 @@ export default function Home() {
         </Row>
 
         <Row className="mb-5">
-          <Col lg={3}>
+          <Col xxl={3} md={6} className="mb-3">
             <CustomerReview/>
           </Col>
 
-          <Col lg={3}>
+          <Col xxl={3} md={6} className="mb-3">
             <CustomerReview/>
           </Col>
 
-          <Col lg={3}>
+          <Col xxl={3} md={6} className="mb-3">
             <CustomerReview/>
           </Col>
 
-          <Col lg={3}>
+          <Col xxl={3} md={6} className="mb-3">
             <CustomerReview/>
           </Col>
         </Row>
@@ -280,5 +281,5 @@ export default function Home() {
 
       <Footer/>
     </>
-    )
+  )
 }

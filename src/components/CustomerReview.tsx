@@ -7,12 +7,12 @@ export default function CustomerReview() {
         <Card className="shadow">
             <Card.Body>
                 <Container>
-                    <Row className="d-flex justify-content-between px-3 mb-2">
-                    <Icon path={mdiStar} color="gold" size={2}/>
-                    <Icon path={mdiStar} color="gold" size={2}/>
-                    <Icon path={mdiStar} color="gold" size={2}/>
-                    <Icon path={mdiStar} color="gold" size={2}/>
-                    <Icon path={mdiStar} color="gold" size={2}/>
+                    <Row className="d-flex justify-content-around px-3 mb-2">
+                    <Icon path={mdiStar} color="gold" size={2} className="p-0"/>
+                    <Icon path={mdiStar} color="gold" size={2} className="p-0"/>
+                    <Icon path={mdiStar} color="gold" size={2} className="p-0"/>
+                    <Icon path={mdiStar} color="gold" size={2} className="p-0"/>
+                    <Icon path={mdiStar} color="gold" size={2} className="p-0"/>
                     </Row>
 
                     <Row>
