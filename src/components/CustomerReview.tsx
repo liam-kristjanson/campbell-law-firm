@@ -37,7 +37,7 @@ export default function CustomerReview(props: CustomerReviewProps) {
                 </Container>
             </Card.Body>
 
-            <Card.Footer>
+            <Card.Footer className="bg-white">
                 <p className='text-primary text-end fs-3 fw-bold'>- {props.customerName}</p>
             </Card.Footer>
         </Card>
