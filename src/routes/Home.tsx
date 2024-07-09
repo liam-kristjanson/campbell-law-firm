@@ -184,7 +184,7 @@ export default function Home() {
                   Whether you're buying, selling, or have any other questions related to real estate law, we're happy to help!
                 </p>
 
-                <Button onClick={() => {navigate('/practice-areas/real-estate'); window.scrollTo(0,0)}}className='w-50 fw-bold' variant='primary'>Learn More</Button>
+                <Button onClick={() => {navigate('/practice-areas/real-estate-law'); window.scrollTo(0,0)}}className='w-50 fw-bold' variant='primary'>Learn More</Button>
               </Card.Body>
             </Card>
           </Col>

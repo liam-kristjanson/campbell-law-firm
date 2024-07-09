@@ -17,7 +17,7 @@ export default function RealEstate() {
                 showMenu={showMenu}
                 menuShowHandler={handleMenuShow}
                 menuHideHandler={handleMenuHide}
-                selectedRoute="/"
+                selectedRoute="/practice-areas/real-estate-law"
             />
             <HeroGraphic
                 imageSource={RealEstatePageHeader}
