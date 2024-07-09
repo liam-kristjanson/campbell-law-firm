@@ -67,7 +67,7 @@ export default function NavBar(props: NavbarProps) {
       <Nav className='fixed-top w-100 justify-content-between align-items-center bg-white shadow p-2'>
         <Nav.Item className='my-auto align-center'>
           <Nav.Link
-          onClick={() => navigate('/')}
+          onClick={() => {navigate('/'); window.scrollTo(0,0)}}
           className='link-primary'
           role='button'
           >
@@ -82,7 +82,7 @@ export default function NavBar(props: NavbarProps) {
               link.route ? (
                 <h5>
                   <Nav.Link
-                  onClick={() => navigate(link.route ?? "/")}
+                  onClick={() => {navigate(link.route ?? "/"); window.scrollTo(0,0)}}
                   className={'my-auto link-' + findLinkClass(link.route)}
                   role='button'
                   >
@@ -101,7 +101,7 @@ export default function NavBar(props: NavbarProps) {
                     >
                       {link.childRoutes.map((sublink: Route) => (
                         <NavDropdown.Item
-                        onClick={() => navigate(sublink.route ?? "/")}
+                        onClick={() => {navigate(sublink.route ?? "/"); window.scrollTo(0,0)}}
                         className={'my-auto link-dark'}
                         role='button'
                         >
@@ -139,7 +139,7 @@ export default function NavBar(props: NavbarProps) {
                 link.route ? (
                   <Nav.Item>
                     <Nav.Link
-                    onClick={() => navigate(link.route ?? "/")}
+                    onClick={() => {navigate(link.route ?? "/"); window.scrollTo(0,0)}}
                     className='link-primary mb-4'
                     >
                       <h5>
@@ -152,7 +152,7 @@ export default function NavBar(props: NavbarProps) {
                     link.childRoutes.map((sublink: Route) => (
                       <Nav.Item>
                         <Nav.Link
-                        onClick={() => navigate(sublink.route ?? "/")}
+                        onClick={() => {navigate(sublink.route ?? "/"); window.scrollTo(0,0)}}
                         className='link-primary mb-4'
                         >
                           <h5>
