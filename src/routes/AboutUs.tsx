@@ -36,13 +36,13 @@ return(
 
                     <div>
                         <h3 className=" text-primary"> Welcome to Campbell Law firm </h3> 
-                        <p>  Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum odio odit maiores reprehenderit! Animi, labore rerum neque, necessitatibus velit assumenda error accusamus architecto et laborum modi reiciendis ad at repudiandae?</p>
+                        <p> Founded in 1995, our firm has built a legacy of trust and excellence in providing comprehensive legal services. We specialize in a broad range of practice areas including real estate law, family law, and immigration law. Our dedicated team of seasoned attorneys brings a wealth of experience and a deep understanding of the law to every case, ensuring that our clients receive the highest quality representation.</p>
                     </div>
                     <div className=" pt-4 fw-bolder text-primary">
                        <Icon path={mdiBullseyeArrow} size={1.5} className="text-primary" />   Mission Statement
 
                     </div>
-                   <div> <p className=""> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque ut totam vero eveniet numquam iusto, recusandae, facere laborum aperiam doloribus incidunt neque praesentium quae! Temporibus expedita similique fugit vel earum. </p>
+                   <div> <p className="">To provide exceptional legal services with integrity, dedication, and a client-centered approach.</p>
 
                    </div>
 
@@ -51,7 +51,7 @@ return(
                      <Icon path={mdiEye} size={1.5} className="text-primary" />  Vision Statement
 
                     </div>
-                   <div> <p className=""> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque ut totam vero eveniet numquam iusto, recusandae, facere laborum aperiam doloribus incidunt neque praesentium quae! Temporibus expedita similique fugit vel earum. </p>
+                   <div> <p className="">To be the leading law firm recognized for excellence, innovation, and unwavering client commitment.</p>
 
                    </div>
 
@@ -59,7 +59,12 @@ return(
                       <Icon path={mdiHandshakeOutline} size={1.5} className="text-primary"  />  Core Values 
 
                     </div>
-                   <div> <p className=""> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque ut totam vero eveniet numquam iusto, recusandae, facere laborum aperiam doloribus incidunt neque praesentium quae! Temporibus expedita similique fugit vel earum. </p>
+                   <div> 
+                        <ul className="d-flex flex-column gap-3">
+                            <li><span className="fw-bold">Integrity: </span>Upholding the highest ethical standards in all our actions.</li>
+                            <li><span className="fw-bold">Dedication: </span>Committing to relentless advocacy and personalized client service.</li>
+                            <li><span className="fw-bold">Excellence: </span>Striving for unparalleled quality in legal practice and client satisfaction.</li>
+                        </ul>
 
                    </div>
                 </div>
