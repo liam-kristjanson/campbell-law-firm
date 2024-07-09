@@ -1,34 +1,36 @@
-import HeroGraphic from "../components/HeroGraphic";
-import RealEstatePageHeader from "../assets/real-estate-page-header.jpg";
-import { mdiHome } from "@mdi/js";
 import { Accordion, Col, Container, Row } from "react-bootstrap";
+
+import HeroGraphic from "../components/HeroGraphic";
+import { mdiHome } from "@mdi/js";
+import RealEstatePageHeader from "../assets/real-estate-page-header.jpg";
+
 import NavBar from "../components/NavBar";
 import useNavBar from "../components/hooks/useNavBar";
-import Footer from "../components/Footer";
-import ContactForm from "../components/ContactForm";
 
-export default function RealEstate() {
-    
+import ContactForm from "../components/ContactForm";
+import Footer from "../components/Footer";
+
+export default function Immigration(){
     const { showMenu, handleMenuShow, handleMenuHide } = useNavBar();
-    
+
     return (
         <>
             <NavBar
                 showMenu={showMenu}
                 menuShowHandler={handleMenuShow}
                 menuHideHandler={handleMenuHide}
-                selectedRoute="/practice-areas/real-estate-law"
+                selectedRoute="/practice-areas/immigration-law"
             />
 
             <HeroGraphic
                 imageSource={RealEstatePageHeader}
-                graphicText=" Real Estate Law"
+                graphicText=" Immigration Law"
                 iconPath={mdiHome}
             />
 
             <Container>
                 <Row>
-                    <h1 className="text-primary">Real Estate Lawyer in Winnipeg, Manitoba</h1>
+                    <h1 className="text-primary">Immigration Lawyer in Winnipeg, Manitoba</h1>
                     <hr/>
                 </Row>
 

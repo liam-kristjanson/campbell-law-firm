@@ -83,7 +83,7 @@ export default function NavBar(props: NavbarProps) {
                 <h5>
                   <Nav.Link
                   onClick={() => navigate(link.route ?? "/")}
-                  className={'my-auto link-' + findLinkClass(link.route)}
+                  className={'my-auto link-' + findLinkClass(link.route ?? "/")}
                   role='button'
                   >
                     <span className={'border-bottom border-' + findLinkClass(link.route ?? "/")}>
@@ -102,7 +102,7 @@ export default function NavBar(props: NavbarProps) {
                       {link.childRoutes.map((sublink: Route) => (
                         <NavDropdown.Item
                         onClick={() => navigate(sublink.route ?? "/")}
-                        className={'my-auto link-dark'}
+                        className={'my-auto link-' + findLinkClass(sublink.route ?? "/")}
                         role='button'
                         >
                           {sublink.text}
@@ -140,10 +140,12 @@ export default function NavBar(props: NavbarProps) {
                   <Nav.Item>
                     <Nav.Link
                     onClick={() => navigate(link.route ?? "/")}
-                    className='link-primary mb-4'
+                    className={'mb-4 link-' + findLinkClass(link.route ?? "/")}
                     >
                       <h5>
-                        <span className="border-bottom border-primary">{link.text}</span>
+                        <span className={'border-bottom border-' + findLinkClass(link.route ?? "/")}>
+                          {link.text}
+                        </span>
                       </h5>
                     </Nav.Link>
                   </Nav.Item>
@@ -153,10 +155,12 @@ export default function NavBar(props: NavbarProps) {
                       <Nav.Item>
                         <Nav.Link
                         onClick={() => navigate(sublink.route ?? "/")}
-                        className='link-primary mb-4'
+                        className={'mb-4 link-' + findLinkClass(sublink.route ?? "/")}
                         >
                           <h5>
-                            <span className="border-bottom border-primary">{sublink.text}</span>
+                            <span className={'border-bottom border-' + findLinkClass(sublink.route ?? "/")}>
+                              {sublink.text}
+                            </span>
                           </h5>
                         </Nav.Link>
                       </Nav.Item>
