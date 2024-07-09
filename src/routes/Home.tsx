@@ -10,9 +10,9 @@ import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import CustomerReview from '../components/CustomerReview';
 
 import BookHeader from "../assets/book-header-croppedV2.jpg";
-import FamilyLawCardPhoto from "../assets/family-law-card-photo.jpg";
-import RealEstateLawCardPhoto from "../assets/real-estate-card-photo.jpg";
-import ImmigrationLawCardPhoto from "../assets/immigration-law-card-photo.jpg";
+import FamilyLawCardPhoto from "../assets/family-law-card-photoV2.jpg";
+import RealEstateLawCardPhoto from "../assets/real-estate-card-photoV2.jpg";
+import ImmigrationLawCardPhoto from "../assets/immigration-law-card-photoV2.jpg";
 import Footer from "../components/Footer";
 import ContactForm from '../components/ContactForm';
 import { useNavigate } from 'react-router-dom';
