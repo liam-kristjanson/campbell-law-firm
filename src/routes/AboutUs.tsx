@@ -25,7 +25,7 @@ return(
         </div>
 
         <HeroGraphic
-            imageSource="aboutUs.png"
+            imageSource="aboutUsV2.jpg"
             graphicText=" About Us"
             iconPath={mdiInformationOutline}
         />

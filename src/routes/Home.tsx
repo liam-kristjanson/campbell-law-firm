@@ -10,9 +10,9 @@ import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import CustomerReview from '../components/CustomerReview';
 
 import BookHeader from "../assets/book-header-croppedV2.jpg";
-import FamilyLawCardPhoto from "../assets/family-law-card-photo.jpg";
-import RealEstateLawCardPhoto from "../assets/real-estate-card-photo.jpg";
-import ImmigrationLawCardPhoto from "../assets/immigration-law-card-photo.jpg";
+import FamilyLawCardPhoto from "../assets/family-law-card-photoV2.jpg";
+import RealEstateLawCardPhoto from "../assets/real-estate-card-photoV2.jpg";
+import ImmigrationLawCardPhoto from "../assets/immigration-law-card-photoV2.jpg";
 import Footer from "../components/Footer";
 import ContactForm from '../components/ContactForm';
 import { useNavigate } from 'react-router-dom';
@@ -20,6 +20,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Home() {
   const { showMenu, handleMenuShow, handleMenuHide } = useNavBar();
   const route = "/";
+  
   const navigate = useNavigate();
 
   return (
@@ -183,7 +184,7 @@ export default function Home() {
                   Whether you're buying, selling, or have any other questions related to real estate law, we're happy to help!
                 </p>
 
-                <Button onClick={() => {navigate('/practice-areas/real-estate'); window.scrollTo(0,0)}}className='w-50 fw-bold' variant='primary'>Learn More</Button>
+                <Button onClick={() => {navigate('/practice-areas/real-estate-law'); window.scrollTo(0,0)}}className='w-50 fw-bold' variant='primary'>Learn More</Button>
               </Card.Body>
             </Card>
           </Col>
@@ -205,7 +206,7 @@ export default function Home() {
                   Family can be complicated. Our team of family law experts will support you through any family law situation you may be in.
                 </p>
 
-                <Button className='w-50 fw-bold' variant='primary'>Learn More</Button>
+                <Button onClick={() => {navigate('/practice-areas/family-law'); window.scrollTo(0,0)}}className='w-50 fw-bold' variant='primary'>Learn More</Button>
               </Card.Body>
             </Card>
           </Col>
@@ -224,7 +225,7 @@ export default function Home() {
                   Immigration Law
                 </Card.Title>
                 <p>
-                  Whether you're buying, selling, or have any other questions related to real estate law, we're happy to help!
+                  Our team of immigration lawyers will help pave the way towards student visas, residency, citezenship, or whatever your immigration goals may be. 
                 </p>
 
                 <Button className='w-50 fw-bold' variant='primary'>Learn More</Button>

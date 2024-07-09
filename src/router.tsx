@@ -5,6 +5,7 @@ import Contact from './routes/Contact';
 import AboutUs from './routes/AboutUs';
 import RealEstate from './routes/RealEstate';
 import Family from './routes/Family';
+import Immigration from './routes/Immigration';
 
 export const router = createBrowserRouter([
     {
@@ -20,13 +21,15 @@ export const router = createBrowserRouter([
         element: <AboutUs/>
     },
     {
-        path: '/practice-areas/real-estate',
+        path: '/practice-areas/real-estate-law',
         element: <RealEstate/>
     },
     {
-        path: '/practice-areas/family' ,
+        path: '/practice-areas/family-law' ,
         element: <Family/>
-    }
-
-    
+    },
+    {
+        path: '/practice-areas/immigration-law',
+        element: <Immigration/>
+    },
 ])

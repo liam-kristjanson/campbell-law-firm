@@ -1,5 +1,5 @@
 import HeroGraphic from "../components/HeroGraphic";
-import RealEstatePageHeader from "../assets/real-estate-page-header.jpg";
+import RealEstatePageHeader from "../assets/real-estate-header-photo.jpg";
 import { mdiHome } from "@mdi/js";
 import { Accordion, Col, Container, Row } from "react-bootstrap";
 import NavBar from "../components/NavBar";
@@ -17,8 +17,9 @@ export default function RealEstate() {
                 showMenu={showMenu}
                 menuShowHandler={handleMenuShow}
                 menuHideHandler={handleMenuHide}
-                selectedRoute="/"
+                selectedRoute="/practice-areas/real-estate-law"
             />
+
             <HeroGraphic
                 imageSource={RealEstatePageHeader}
                 graphicText=" Real Estate Law"

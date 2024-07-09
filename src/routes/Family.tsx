@@ -2,7 +2,7 @@ import HeroGraphic from "../components/HeroGraphic";
 import { Accordion, Col, Container, Row } from "react-bootstrap";
 import NavBar from "../components/NavBar";
 import useNavBar from "../components/hooks/useNavBar";
-import FamilyLawCardPhoto from "../assets/family-law-card-photo.jpg"
+import FamilyLawCardPhoto from "../assets/family-law-header-photo.jpg"
 import { mdiHumanMaleFemaleChild } from '@mdi/js';
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
@@ -17,7 +17,7 @@ export default function Family(){
                 showMenu={showMenu}
                 menuShowHandler={handleMenuShow}
                 menuHideHandler={handleMenuHide}
-                selectedRoute="/"
+                selectedRoute="/practice-areas/family-law"
             />
 
             <HeroGraphic

@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Icon from '@mdi/react';
 import { mdiMenu, mdiScaleBalance } from '@mdi/js';
 
-import { Nav, Offcanvas } from 'react-bootstrap'
+import { Nav, NavDropdown, Offcanvas } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom';
 
 interface NavbarProps {
@@ -13,30 +13,69 @@ interface NavbarProps {
   selectedRoute: string;
 }
 
+interface Route {
+  route?: string;
+  text: string;
+  childRoutes? : Route[];
+  highlightKey: string;
+}
+
 export default function NavBar(props: NavbarProps) {
   const navigate = useNavigate();
 
-  const links = [
+  const links : Route[] = [
     {
       route: "/",
       text: "Home",
+      highlightKey:"/"
     },
     {
       route: "/about-us",
+      highlightKey:"/about-us",
       text: "About",
+    },
+    {
+      text: "Practice Areas",
+      highlightKey: "/practice-areas",
+      childRoutes: [
+        {
+          route: "/practice-areas/real-estate-law",
+          text: "Real Estate Law",
+          highlightKey: "/practice-areas/real-estate-law"
+        },
+        {
+          route: "/practice-areas/immigration-law",
+          text: "Immigration Law",
+          highlightKey: "/practice-areas/immigration-law"
+        },
+        {
+          route: "/practice-areas/family-law",
+          text: "Family Law",
+          highlightKey: "/practice-areas/family-law"
+        },
+      ],
     },
     {
       route: "/contact",
       text: "Contact",
+      highlightKey:"/contact"
     },
   ];
 
-  function findLinkClass(linkText: string) : string {
-    if (linkText === props.selectedRoute){
+  function findLinkClass(highlightKey: string) : string {
+    if (highlightKey === props.selectedRoute){
       return 'primary'
     }
 
     return 'dark'
+  }
+
+  function findNavDropdownClass(highlightKey : string) : string {
+    if (props.selectedRoute.includes(highlightKey)) {
+      return "primary"
+    }
+
+    return "dark"
   }
 
   return (
@@ -44,7 +83,7 @@ export default function NavBar(props: NavbarProps) {
       <Nav className='fixed-top w-100 justify-content-between align-items-center bg-white shadow p-2'>
         <Nav.Item className='my-auto align-center'>
           <Nav.Link
-          onClick={() => navigate('/')}
+          onClick={() => {navigate('/'); window.scrollTo(0,0)}}
           className='link-primary'
           role='button'
           >
@@ -55,16 +94,43 @@ export default function NavBar(props: NavbarProps) {
         </Nav.Item>
 
         <Nav.Item className='d-none d-md-flex my-auto align-center'>
-            {links.map((link: {route: string, text: string}) => (
-              <Nav.Link
-              onClick={() => navigate(link.route)}
-              className={'my-auto link-' + findLinkClass(link.route)}
-              role='button'
-              >
-              <h5 className={'border-bottom border-' + findLinkClass(link.route)}>
-                {link.text}
-              </h5>
-              </Nav.Link>
+            {links.map((link: Route) => (
+              link.route ? (
+                <h5>
+                  <Nav.Link
+                  onClick={() => {navigate(link.route ?? "/"); window.scrollTo(0,0)}}
+                  className={'my-auto link-' + findLinkClass(link.highlightKey)}
+                  role='button'
+                  >
+                    <span className={'border-bottom border-' + findLinkClass(link.highlightKey ?? "/")}>
+                      {link.text}
+                    </span>
+                  </Nav.Link>
+                </h5>
+              ) : (
+                link.childRoutes ? (
+                  <h5>
+                    <NavDropdown
+                    title={link.text}
+                    id="parent-nav-dropdown"
+                    menuVariant='light'
+                    className={'my-auto link-dark ' + findNavDropdownClass(link.highlightKey)} 
+                    >
+                      {link.childRoutes.map((sublink: Route) => (
+                        <NavDropdown.Item
+                        onClick={() => {navigate(sublink.route ?? "/"); window.scrollTo(0,0)}}
+                        className={'my-auto link-' + findLinkClass(sublink.highlightKey)}
+                        role='button'
+                        >
+                          {sublink.text}
+                        </NavDropdown.Item>
+                      ))}
+                    </NavDropdown>
+                  </h5>
+                ) : (
+                  <></>
+                )
+              )
             ))}
         </Nav.Item>
 
@@ -86,17 +152,40 @@ export default function NavBar(props: NavbarProps) {
             </Offcanvas.Header>
 
             <Offcanvas.Body>
-              {links.map((link: {route: string, text: string}) => (
-                <Nav.Item>
-                  <Nav.Link
-                  onClick={() => navigate(link.route)}
-                  className='link-primary mb-4'
-                  >
-                    <h5>
-                      <span className="border-bottom border-primary">{link.text}</span>
-                    </h5>
-                  </Nav.Link>
-                </Nav.Item>
+              {links.map((link : Route) => (
+                link.route ? (
+                  <Nav.Item>
+                    <Nav.Link
+                    onClick={() => {navigate(link.route ?? "/"); window.scrollTo(0,0)}}
+                    className={'mb-4 link-' + findLinkClass(link.highlightKey ?? "/")}
+                    >
+                      <h5>
+                        <span className={'border-bottom border-' + findLinkClass(link.highlightKey ?? "/")}>
+                          {link.text}
+                        </span>
+                      </h5>
+                    </Nav.Link>
+                  </Nav.Item>
+                ) : (
+                  link.childRoutes ? (
+                    link.childRoutes.map((sublink: Route) => (
+                      <Nav.Item>
+                        <Nav.Link
+                        onClick={() => {navigate(sublink.route ?? "/"); window.scrollTo(0,0)}}
+                        className={'mb-4 link-' + findLinkClass(sublink.highlightKey ?? "/")}
+                        >
+                          <h5>
+                            <span className={'border-bottom border-' + findLinkClass(sublink.highlightKey ?? "/")}>
+                              {sublink.text}
+                            </span>
+                          </h5>
+                        </Nav.Link>
+                      </Nav.Item>
+                    ))
+                  ) : (
+                    <></>
+                  )
+                )
               ))}
             </Offcanvas.Body>
         </Offcanvas>

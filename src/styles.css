@@ -1,0 +1,7 @@
+a.dropdown-toggle.nav-link {
+    color: rgb(33, 37, 41);
+}
+
+div.primary a.dropdown-toggle.nav-link {
+    color: var(--bs-primary);
+}
