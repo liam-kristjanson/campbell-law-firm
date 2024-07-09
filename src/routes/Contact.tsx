@@ -24,7 +24,7 @@ export default function Contact() {
             <HeroGraphic
                     graphicText=' Contact Information'
                     iconPath={mdiPhoneClassic}
-                    imageSource='telephone-header.jpg'
+                    imageSource='telephone-headerV2.jpg'
                 />
 
             <Container>
