@@ -83,7 +83,7 @@ export default function NavBar(props: NavbarProps) {
       <Nav className='fixed-top w-100 justify-content-between align-items-center bg-white shadow p-2'>
         <Nav.Item className='my-auto align-center'>
           <Nav.Link
-          onClick={() => {navigate('/'); window.scrollTo(0,0)}}
+          onClick={() => {window.scrollTo(0,0); navigate('/');}}
           className='link-primary'
           role='button'
           >
@@ -98,7 +98,7 @@ export default function NavBar(props: NavbarProps) {
               link.route ? (
                 <h5>
                   <Nav.Link
-                  onClick={() => {navigate(link.route ?? "/"); window.scrollTo(0,0)}}
+                  onClick={() => {window.scrollTo(0,0); navigate(link.route ?? "/");}}
                   className={'my-auto link-' + findLinkClass(link.highlightKey)}
                   role='button'
                   >
@@ -118,7 +118,7 @@ export default function NavBar(props: NavbarProps) {
                     >
                       {link.childRoutes.map((sublink: Route) => (
                         <NavDropdown.Item
-                        onClick={() => {navigate(sublink.route ?? "/"); window.scrollTo(0,0)}}
+                        onClick={() => {window.scrollTo(0,0); navigate(sublink.route ?? "/");}}
                         className={'my-auto link-' + findLinkClass(sublink.highlightKey)}
                         role='button'
                         >
@@ -156,7 +156,7 @@ export default function NavBar(props: NavbarProps) {
                 link.route ? (
                   <Nav.Item>
                     <Nav.Link
-                    onClick={() => {navigate(link.route ?? "/"); window.scrollTo(0,0)}}
+                    onClick={() => {window.scrollTo(0,0); navigate(link.route ?? "/")}}
                     className={'mb-4 link-' + findLinkClass(link.highlightKey ?? "/")}
                     >
                       <h5>
@@ -171,7 +171,7 @@ export default function NavBar(props: NavbarProps) {
                     link.childRoutes.map((sublink: Route) => (
                       <Nav.Item>
                         <Nav.Link
-                        onClick={() => {navigate(sublink.route ?? "/"); window.scrollTo(0,0)}}
+                        onClick={() => {window.scrollTo(0,0); navigate(sublink.route ?? "/")}}
                         className={'mb-4 link-' + findLinkClass(sublink.highlightKey ?? "/")}
                         >
                           <h5>
