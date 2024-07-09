@@ -9,7 +9,7 @@ import HeroGraphic from '../components/HeroGraphic';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import CustomerReview from '../components/CustomerReview';
 
-import BookHeader from "../assets/book-header-cropped.jpg";
+import BookHeader from "../assets/book-header-croppedV2.jpg";
 import FamilyLawCardPhoto from "../assets/family-law-card-photo.jpg";
 import RealEstateLawCardPhoto from "../assets/real-estate-card-photo.jpg";
 import ImmigrationLawCardPhoto from "../assets/immigration-law-card-photo.jpg";
@@ -183,7 +183,7 @@ export default function Home() {
                   Whether you're buying, selling, or have any other questions related to real estate law, we're happy to help!
                 </p>
 
-                <Button onClick={() => {navigate('/practice/real-estate')}}className='w-50 fw-bold' variant='primary'>Learn More</Button>
+                <Button onClick={() => {navigate('/practice-areas/real-estate'); window.scrollTo(0,0)}}className='w-50 fw-bold' variant='primary'>Learn More</Button>
               </Card.Body>
             </Card>
           </Col>

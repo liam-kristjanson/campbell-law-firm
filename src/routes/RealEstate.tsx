@@ -27,7 +27,7 @@ export default function RealEstate() {
 
             <Container>
                 <Row>
-                    <h1 className="text-primary">This is the real estate page</h1>
+                    <h1 className="text-primary">Real Estate Lawyer in Winnipeg, Manitoba</h1>
                     <hr/>
                 </Row>
 

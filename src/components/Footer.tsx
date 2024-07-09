@@ -5,12 +5,15 @@ import { mdiCellphoneBasic } from '@mdi/js';
 import { mdiFax } from '@mdi/js';
 import { mdiEmailFastOutline } from '@mdi/js';
 import { mdiMapMarkerRadiusOutline } from '@mdi/js';
+import { useNavigate } from "react-router-dom";
 
 const myStyle={
     listStyleType:'none'
 }
 
 export default function Footer() {
+
+const navigate = useNavigate()
 
 
 return(
@@ -38,9 +41,9 @@ return(
                     <h5>Quick Links</h5>
 
                     <ul className="d-flex flex-column gap-3 fw-bold text-decoration-underline">
-                        <li role="button">Home</li>
-                        <li role="button">About Us</li>
-                        <li role="button">Contact</li>
+                        <li role="button" onClick={() => {navigate("/"); window.scrollTo(0,0)}}>Home</li>
+                        <li role="button" onClick={() => {navigate("/about-us"); window.scrollTo(0,0)}}>About Us</li>
+                        <li role="button" onClick={() => {navigate("/contact"); window.scrollTo(0,0)}}>Contact</li>
                     </ul>
                     
                     {/* <div className="d-flex justify-content-evenly text-light mt-5">

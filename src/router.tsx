@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
         element: <AboutUs/>
     },
     {
-        path: '/practice/real-estate',
+        path: '/practice-areas/real-estate',
         element: <RealEstate/>
     }
     
