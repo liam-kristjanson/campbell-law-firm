@@ -21,7 +21,7 @@ return(
         
         {/* <Container className="w-100 p-0 m-0"> */}
             <Row className="p-3">
-                    <h3 className="text-decoration-underline" role="button"> <VscLaw />A.L Campbell Law Office</h3>
+                    <h3 className="text-decoration-underline hover-pointer"> <VscLaw />A.L Campbell Law Office</h3>
             </Row>
 
             <Row className="p-3">
@@ -41,9 +41,9 @@ return(
                     <h5>Quick Links</h5>
 
                     <ul className="d-flex flex-column gap-3 fw-bold text-decoration-underline">
-                        <li className="hover-pointer" role="link" onClick={() => {window.scrollTo(0,0); navigate("/"); }}>Home</li>
-                        <li className="hover-pointer" role="link" onClick={() => {window.scrollTo(0,0); navigate("/about-us")}}>About Us</li>
-                        <li className="hover-pointer" role="link" onClick={() => {window.scrollTo(0,0); navigate("/contact");}}>Contact</li>
+                        <li><a className="hover-pointer text-white" onClick={() => {window.scrollTo(0,0); navigate("/"); }}>Home</a></li>
+                        <li><a className="hover-pointer text-white" onClick={() => {window.scrollTo(0,0); navigate("/about-us")}}>About Us</a></li>
+                        <li><a className="hover-pointer text-white" onClick={() => {window.scrollTo(0,0); navigate("/contact");}}>Contact</a></li>
                     </ul>
                     
                     {/* <div className="d-flex justify-content-evenly text-light mt-5">
@@ -72,10 +72,10 @@ return(
 
                 <h5>Areas of Practice</h5>
 
-                    <ul role="list" className="d-flex flex-column gap-3 fw-bold text-decoration-underline">
-                        <li className="hover-pointer" role="link" onClick={() => {window.scrollTo(0,0); navigate("/practice-areas/real-estate-law");}}>Real Estate Law</li>
-                        <li className="hover-pointer" role="link" onClick={() => {window.scrollTo(0,0); navigate("/practice-areas/family-law");}}>Family Law</li>
-                        <li className="hover-pointer" role="link" onClick={() => {window.scrollTo(0,0); navigate("/practice-areas/immigration-law"); window.scrollTo(0,0)}}>Immigration Law</li>
+                    <ul className="d-flex flex-column gap-3 fw-bold text-decoration-underline">
+                        <li><a className="hover-pointer text-white" onClick={() => {window.scrollTo(0,0); navigate("/practice-areas/real-estate-law");}}>Real Estate Law</a></li>
+                        <li><a className="hover-pointer text-white" onClick={() => {window.scrollTo(0,0); navigate("/practice-areas/family-law");}}>Family Law</a></li>
+                        <li><a className="hover-pointer text-white" onClick={() => {window.scrollTo(0,0); navigate("/practice-areas/immigration-law"); window.scrollTo(0,0)}}>Immigration Law</a></li>
                     </ul>
 
                     {/* <div className="d-flex justify-content-evenly text-light mt-5">
