@@ -241,19 +241,31 @@ export default function Home() {
 
         <Row className="mb-5">
           <Col xxl={3} md={6} className="mb-3">
-            <CustomerReview/>
+            <CustomerReview
+              customerName='John Doe'
+              reviewContent="Ms. Campbell was so helpful in my immigration case. Thanks to her I am now living the Canadian dream! I would highly recommend A.L Campbell law office for anyone seeking expertise in Canadian immigration law."
+            />
           </Col>
 
           <Col xxl={3} md={6} className="mb-3">
-            <CustomerReview/>
+            <CustomerReview
+              customerName='Jane Roe'
+              reviewContent="Working with Ms. Campbell for my family law case was a truly positive experience. Their expertise, compassion, and dedication made a stressful situation much more manageable. They were always available to answer questions and provide support. I highly recommend A.L. Campbell Law Office for anyone in need of family law services."
+            />
           </Col>
 
           <Col xxl={3} md={6} className="mb-3">
-            <CustomerReview/>
+            <CustomerReview
+              customerName='Adam Appleseed'
+              reviewContent="I had a fantastic experience working with Ms. Campbell for my real estate transaction. They were incredibly knowledgeable, detail-oriented, and responsive. They made the entire process seamless and stress-free. I highly recommend A.L Campbell Law Office for anyone needing expert real estate legal services."
+            />
           </Col>
 
           <Col xxl={3} md={6} className="mb-3">
-            <CustomerReview/>
+            <CustomerReview
+              customerName='Eve Eden'
+              reviewContent="Ms. Campbell is exceptional in immigration law. They guided me through the complex process with patience and clarity. Their thorough knowledge and genuine care for my case led to a successful outcome. I am grateful for their support and highly recommend A.L Campbell Law Office for anyone facing immigration challenges."
+            />
           </Col>
         </Row>
 

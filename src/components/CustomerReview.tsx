@@ -2,9 +2,14 @@ import { mdiStar } from "@mdi/js"
 import Icon from "@mdi/react"
 import { Card, Container, Row, Col } from "react-bootstrap"
 
-export default function CustomerReview() {
+interface CustomerReviewProps {
+    reviewContent: string;
+    customerName: string;
+}
+
+export default function CustomerReview(props: CustomerReviewProps) {
     return (
-        <Card className="shadow">
+        <Card className="shadow h-100">
             <Card.Body>
                 <Container>
                     <Row className="d-flex justify-content-around px-3 mb-2">
@@ -18,8 +23,7 @@ export default function CustomerReview() {
                     <Row>
                     <Col>
                         <p className="fst-italic">
-                        "Ms. Campbell was so helpful in my immigration case. Thanks to her I am now living the Canadian dream!
-                        I would highly recommend A.L Campbell law office for anyone seeking expertise in Canadian immigration law."
+                            {props.reviewContent}
                         </p>
 
                         {/* <hr/>
@@ -27,11 +31,15 @@ export default function CustomerReview() {
                         "
                         </p> */}
 
-                        <p className='text-primary text-end fs-3 fw-bold'>- John Doe</p>
+                        
                     </Col>
                     </Row>
                 </Container>
             </Card.Body>
+
+            <Card.Footer>
+                <p className='text-primary text-end fs-3 fw-bold'>- {props.customerName}</p>
+            </Card.Footer>
         </Card>
     )
 }
