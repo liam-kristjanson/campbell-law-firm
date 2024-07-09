@@ -168,7 +168,7 @@ export default function Home() {
 
         <Row className="mb-5">
           <Col lg={4} className='mb-4 grow-hover'>
-            <Card className='shadow'>
+            <Card className='shadow h-100'>
               <Card.Img variant='top' alt="Real Estate Law" src={RealEstateLawCardPhoto}/>
 
               {/* <Card.Header className='text-primary'>
@@ -190,7 +190,7 @@ export default function Home() {
           </Col>
 
           <Col lg={4} className='mb-4 grow-hover'>
-            <Card className='shadow'>
+            <Card className='shadow h-100'>
               <Card.Img variant='top' alt="Family Law" src={FamilyLawCardPhoto}/>
 
               {/* <Card.Header className='text-primary'>
@@ -212,7 +212,7 @@ export default function Home() {
           </Col>
 
           <Col lg={4} className='mb-4'>
-            <Card className='shadow'>
+            <Card className='shadow h-100'>
               <Card.Img variant='top' alt="Immigration Law" src={ImmigrationLawCardPhoto}/>
 
               {/* <Card.Header className='text-primary'>
