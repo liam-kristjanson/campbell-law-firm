@@ -66,7 +66,7 @@ export default function Contact() {
 
                 <Row className="justify-content-center mb-5">
                     <Col className="col-4 col-md-3 col-lg-2">
-                        <Nav.Link className="link-primary d-flex align-items-center flex-column" href="#">
+                        <Nav.Link className="link-primary d-flex align-items-center flex-column" href="https://www.facebook.com/isafiade.a.lucia?mibextid=ZbWKwL">
                             <Icon path={mdiFacebook} size={2}/>
                             <Container className="text-center">Facebook</Container>
                         </Nav.Link>
