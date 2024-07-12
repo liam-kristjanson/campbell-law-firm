@@ -1,4 +1,3 @@
-import Icon from '@mdi/react';
 import { mdiGavel, mdiHandshake, mdiScaleBalance } from '@mdi/js';
 
 import NavBar from '../components/NavBar';
@@ -6,7 +5,7 @@ import useNavBar from '../components/hooks/useNavBar';
 
 import HeroGraphic from '../components/HeroGraphic';
 
-import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import CustomerReview from '../components/CustomerReview';
 
 import BookHeader from "../assets/book-header-croppedV2.jpg";
@@ -16,13 +15,12 @@ import ImmigrationLawCardPhoto from "../assets/immigration-law-card-photoV2.jpg"
 import NotaryCardPhoto from "../assets/notary-card-photo.jpg";
 import Footer from "../components/Footer";
 import ContactForm from '../components/ContactForm';
-import { useNavigate } from 'react-router-dom';
+import PracticeAreaCard from '../components/PracticeAreaCard';
+import CoreValuesCard from '../components/CoreValuesCard';
 
 export default function Home() {
   const { showMenu, handleMenuShow, handleMenuHide } = useNavBar();
   const route = "/";
-  
-  const navigate = useNavigate();
 
   return (
     <>
@@ -78,104 +76,39 @@ export default function Home() {
 
         <Row className="mb-5">
           <Col lg={6} xl={3} className='mb-4 grow-hover'>
-            <Card className='shadow h-100'>
-              <Card.Img variant='top' alt="Real Estate Law" src={RealEstateLawCardPhoto}/>
-
-              {/* <Card.Header className='text-primary'>
-                <h6 className='fw-bold'>Real Estate</h6>
-              </Card.Header> */}
-
-              <Card.Body>
-
-                <Card.Title className='text-primary fw-bold'>
-                  Real Estate Law
-                </Card.Title>
-                <p>
-                  Whether you're buying, selling, or have any other questions related to real estate law, we're happy to help!
-                </p>
-
-                
-              </Card.Body>
-
-              <Card.Footer className="bg-white border-0">
-                <Button onClick={() => {window.scrollTo(0,0); navigate('/practice-areas/real-estate-law')}}className='w-75 fw-bold' variant='primary'>Learn More</Button>
-              </Card.Footer>
-            </Card>
+            <PracticeAreaCard
+              photoSource={RealEstateLawCardPhoto}
+              title='Real Estate Law'
+              body="Whether you're buying, selling, or have any other questions related to real estate law, we're happy to help!"
+              route="/practice-areas/real-estate-law"
+            />
           </Col>
 
           <Col lg={6} xl={3} className='mb-4 grow-hover'>
-            <Card className='shadow h-100'>
-              <Card.Img variant='top' alt="Family Law" src={FamilyLawCardPhoto}/>
-
-              {/* <Card.Header className='text-primary'>
-                <h6 className='fw-bold'>Real Estate</h6>
-              </Card.Header> */}
-
-              <Card.Body>
-
-                <Card.Title className='text-primary fw-bold'>
-                  Family Law
-                </Card.Title>
-                <p>
-                  Family can be complicated. Our team of family law experts will support you through any family law situation you may be in.
-                </p>
-              </Card.Body>
-
-              <Card.Footer className="bg-white border-0">
-                  <Button onClick={() => {window.scrollTo(0,0); navigate('/practice-areas/family-law')}}className='w-75 fw-bold' variant='primary'>Learn More</Button>
-              </Card.Footer>
-            </Card>
+            <PracticeAreaCard
+                photoSource={FamilyLawCardPhoto}
+                title='Family Law'
+                body="Family can be complicated. Our team of family law experts will support you through any family law situation you may be in."
+                route="/practice-areas/family-law"
+              />
           </Col>
 
           <Col lg={6} xl={3} className='mb-4'>
-            <Card className='shadow h-100'>
-              <Card.Img variant='top' alt="Immigration Law" src={ImmigrationLawCardPhoto}/>
-
-              {/* <Card.Header className='text-primary'>
-                <h6 className='fw-bold'>Real Estate</h6>
-              </Card.Header> */}
-
-              <Card.Body>
-
-                <Card.Title className='text-primary fw-bold'>
-                  Immigration Law
-                </Card.Title>
-                <p>
-                  Our team of immigration lawyers will help pave the way towards student visas, residency, citezenship, or whatever your immigration goals may be. 
-                </p>
-
-              </Card.Body>
-
-              <Card.Footer className="bg-white border-0">
-                <Button onClick={() => {window.scrollTo(0,0); navigate('/practice-areas/immigration-law')}}className='w-75 fw-bold' variant='primary'>Learn More</Button>
-              </Card.Footer>
-            </Card>
+            <PracticeAreaCard
+              photoSource={ImmigrationLawCardPhoto}
+              body="Our team of immigration lawyers will help pave the way towards student visas, residency, citezenship, or whatever your immigration goals may be."
+              title="Immigration Law"
+              route="/practice-areas/immigration-law"
+            />
           </Col>
 
           <Col lg={6} xl={3} className='mb-4 grow-hover'>
-            <Card className='shadow h-100'>
-              <Card.Img variant='top' alt="Notary Services" src={NotaryCardPhoto}/>
-
-              {/* <Card.Header className='text-primary'>
-                <h6 className='fw-bold'>Real Estate</h6>
-              </Card.Header> */}
-
-              <Card.Body>
-
-                <Card.Title className='text-primary fw-bold'>
-                  Notary Services
-                </Card.Title>
-                <p>
-                  Need a notary? Look no further! Our professional notary services ensure your documents are legally binding. Our services are fast, reliable, and convenient.
-                </p>
-
-                
-              </Card.Body>
-
-              <Card.Footer className='bg-white border-0'>
-                <Button onClick={() => {window.scrollTo(0,0); navigate('/practice-areas/notary-services')}}className='w-75 fw-bold' variant='primary'>Learn More</Button>
-              </Card.Footer>
-            </Card>
+            <PracticeAreaCard
+              photoSource={NotaryCardPhoto}
+              title="Notary Services"
+              body="Need a notary? Look no further! Our professional notary services ensure your documents are legally binding. Our services are fast, reliable, and convenient."
+              route="/practice-areas/notary-services"
+            />
           </Col>
         </Row>
         
@@ -187,86 +120,29 @@ export default function Home() {
         </Row>
 
         <Row className='mb-5'>
+
           <Col lg={4} className='mb-4'>
-            <Card className='shadow h-100 p-1'>
-
-              <Container>
-                <Row className='d-flex justify-content-center'>
-                  <Col className='col-12 text-center'>
-                    <Icon path={mdiGavel} size={4}/>
-                    <hr/>
-                  </Col>
-                </Row>
-
-                <Row>
-                  <Col>
-                    <h3 className='text-primary text-center'>Justice</h3>
-
-                    <p>
-                      We believe in doing what is right. We value standing up for
-                      those in need, and using our legal skills to help those in need of assistance.
-                      With A.L Campbell Law Office, you are in good hands.
-                    </p>
-                  </Col>
-                </Row>
-              </Container>
-                
-            </Card>
+            <CoreValuesCard
+              iconPath={mdiGavel}
+              heading="Justice"
+              body={["We believe in doing what is right. We value standing up for those in need, and using our legal skills to help those in need of assistance. With A.L Campbell Law Office, you are in good hands."]}
+            />
           </Col>
 
           <Col lg={4} className='mb-4'>
-            <Card className='shadow h-100 p-1'>
-
-              <Container>
-                <Row className='d-flex justify-content-center'>
-                  <Col className='col-12 text-center'>
-                    <Icon path={mdiScaleBalance} size={4}/>
-                    <hr/>
-                  </Col>
-                </Row>
-
-                <Row>
-                  <Col>
-                    <h3 className='text-primary text-center'>Equality</h3>
-
-                    <p>
-                      Believing in equality means recognizing and valuing the inherent dignity and worth of every individual, regardless of their background, identity, or circumstances. 
-                      It involves advocating for fair treatment, opportunities, and rights for all people, fostering a society where everyone has the chance to thrive and contribute.
-                    </p>
-
-                    <p>
-                      Embracing equality is essential for building inclusive communities and a just world where diversity is celebrated and everyone can reach their full potential.
-                    </p>
-                  </Col>
-                </Row>
-              </Container>
-                
-            </Card>
+            <CoreValuesCard
+              iconPath={mdiScaleBalance}
+              heading="Equality"
+              body={["Believing in equality means recognizing and valuing the inherent dignity and worth of every individual, regardless of their background, identity, or circumstances. It involves advocating for fair treatment, opportunities, and rights for all people, fostering a society where everyone has the chance to thrive and contribute.", "Embracing equality is essential for building inclusive communities and a just world where diversity is celebrated and everyone can reach their full potential."]}
+            />
           </Col>
 
-          <Col lg={4} className='mb-4 grow-hover'>
-            <Card className='shadow h-100 p-1'>
-
-              <Container>
-                <Row className='d-flex justify-content-center'>
-                  <Col className='col-12 text-center'>
-                    <Icon path={mdiHandshake} size={4}/>
-                    <hr/>
-                  </Col>
-                </Row>
-
-                <Row>
-                  <Col>
-                    <h3 className='text-primary text-center'>Honesty</h3>
-
-                    <p>
-                    Honesty fosters trust and integrity, creating strong, transparent relationships. It involves being truthful and sincere, even when it's challenging, and always valuing truth over deceit.
-                    </p>
-                  </Col>
-                </Row>
-              </Container>
-                
-            </Card>
+          <Col lg={4} className='mb-4'>
+            <CoreValuesCard
+              iconPath={mdiHandshake}
+              heading="Honesty"
+              body={["Honesty fosters trust and integrity, creating strong, transparent relationships. It involves being truthful and sincere, even when it's challenging, and always valuing truth over deceit."]}
+            />
           </Col>
         </Row>
 
