@@ -21,7 +21,7 @@ return(
         
         {/* <Container className="w-100 p-0 m-0"> */}
             <Row className="p-3">
-                    <h3 className="text-decoration-underline hover-pointer"> <VscLaw />A.L Campbell Law Office</h3>
+                    <h3 className="text-decoration-underline hover-pointer" onClick={() => {window.scrollTo(0,0); navigate('/')}}> <VscLaw />A.L Campbell Law Office</h3>
             </Row>
 
             <Row className="p-3">

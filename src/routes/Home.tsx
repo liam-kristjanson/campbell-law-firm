@@ -60,6 +60,88 @@ export default function Home() {
             </p>
           </Col>
         </Row>
+
+        <Row>
+          <h1 className='text-primary'>Areas of practice</h1>
+          <hr/>
+        </Row>
+
+        <Row className='mb-4'>
+          <Col lg={8}>
+            <p>
+              We are happy to offer our legal services in any of the following areas. Click on any of the cards to learn more about
+              our team, the services we offer, and some frequently asked questions related to the legal field
+            </p>
+          </Col>
+        </Row>
+
+        <Row className="mb-5">
+          <Col lg={4} className='mb-4 grow-hover'>
+            <Card className='shadow h-100'>
+              <Card.Img variant='top' alt="Real Estate Law" src={RealEstateLawCardPhoto}/>
+
+              {/* <Card.Header className='text-primary'>
+                <h6 className='fw-bold'>Real Estate</h6>
+              </Card.Header> */}
+
+              <Card.Body>
+
+                <Card.Title className='text-primary fw-bold'>
+                  Real Estate Law
+                </Card.Title>
+                <p>
+                  Whether you're buying, selling, or have any other questions related to real estate law, we're happy to help!
+                </p>
+
+                <Button onClick={() => {window.scrollTo(0,0); navigate('/practice-areas/real-estate-law')}}className='w-50 fw-bold' variant='primary'>Learn More</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col lg={4} className='mb-4 grow-hover'>
+            <Card className='shadow h-100'>
+              <Card.Img variant='top' alt="Family Law" src={FamilyLawCardPhoto}/>
+
+              {/* <Card.Header className='text-primary'>
+                <h6 className='fw-bold'>Real Estate</h6>
+              </Card.Header> */}
+
+              <Card.Body>
+
+                <Card.Title className='text-primary fw-bold'>
+                  Family Law
+                </Card.Title>
+                <p>
+                  Family can be complicated. Our team of family law experts will support you through any family law situation you may be in.
+                </p>
+
+                <Button onClick={() => {window.scrollTo(0,0); navigate('/practice-areas/family-law')}}className='w-50 fw-bold' variant='primary'>Learn More</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col lg={4} className='mb-4'>
+            <Card className='shadow h-100'>
+              <Card.Img variant='top' alt="Immigration Law" src={ImmigrationLawCardPhoto}/>
+
+              {/* <Card.Header className='text-primary'>
+                <h6 className='fw-bold'>Real Estate</h6>
+              </Card.Header> */}
+
+              <Card.Body>
+
+                <Card.Title className='text-primary fw-bold'>
+                  Immigration Law
+                </Card.Title>
+                <p>
+                  Our team of immigration lawyers will help pave the way towards student visas, residency, citezenship, or whatever your immigration goals may be. 
+                </p>
+
+                <Button onClick={() => {window.scrollTo(0,0); navigate('/practice-areas/immigration-law')}}className='w-50 fw-bold' variant='primary'>Learn More</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
         
         <Row>
           <Col>
@@ -148,88 +230,6 @@ export default function Home() {
                 </Row>
               </Container>
                 
-            </Card>
-          </Col>
-        </Row>
-
-        <Row>
-          <h1 className='text-primary'>Areas of practice</h1>
-          <hr/>
-        </Row>
-
-        <Row className='mb-4'>
-          <Col lg={8}>
-            <p>
-              We are happy to offer our legal services in any of the following areas. Click on any of the cards to learn more about
-              our team, the services we offer, and some frequently asked questions related to the legal field
-            </p>
-          </Col>
-        </Row>
-
-        <Row className="mb-5">
-          <Col lg={4} className='mb-4 grow-hover'>
-            <Card className='shadow h-100'>
-              <Card.Img variant='top' alt="Real Estate Law" src={RealEstateLawCardPhoto}/>
-
-              {/* <Card.Header className='text-primary'>
-                <h6 className='fw-bold'>Real Estate</h6>
-              </Card.Header> */}
-
-              <Card.Body>
-
-                <Card.Title className='text-primary fw-bold'>
-                  Real Estate Law
-                </Card.Title>
-                <p>
-                  Whether you're buying, selling, or have any other questions related to real estate law, we're happy to help!
-                </p>
-
-                <Button onClick={() => {window.scrollTo(0,0); navigate('/practice-areas/real-estate-law')}}className='w-50 fw-bold' variant='primary'>Learn More</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col lg={4} className='mb-4 grow-hover'>
-            <Card className='shadow h-100'>
-              <Card.Img variant='top' alt="Family Law" src={FamilyLawCardPhoto}/>
-
-              {/* <Card.Header className='text-primary'>
-                <h6 className='fw-bold'>Real Estate</h6>
-              </Card.Header> */}
-
-              <Card.Body>
-
-                <Card.Title className='text-primary fw-bold'>
-                  Family Law
-                </Card.Title>
-                <p>
-                  Family can be complicated. Our team of family law experts will support you through any family law situation you may be in.
-                </p>
-
-                <Button onClick={() => {window.scrollTo(0,0); navigate('/practice-areas/family-law')}}className='w-50 fw-bold' variant='primary'>Learn More</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col lg={4} className='mb-4'>
-            <Card className='shadow h-100'>
-              <Card.Img variant='top' alt="Immigration Law" src={ImmigrationLawCardPhoto}/>
-
-              {/* <Card.Header className='text-primary'>
-                <h6 className='fw-bold'>Real Estate</h6>
-              </Card.Header> */}
-
-              <Card.Body>
-
-                <Card.Title className='text-primary fw-bold'>
-                  Immigration Law
-                </Card.Title>
-                <p>
-                  Our team of immigration lawyers will help pave the way towards student visas, residency, citezenship, or whatever your immigration goals may be. 
-                </p>
-
-                <Button className='w-50 fw-bold' variant='primary'>Learn More</Button>
-              </Card.Body>
             </Card>
           </Col>
         </Row>
