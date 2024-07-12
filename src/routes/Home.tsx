@@ -13,6 +13,7 @@ import BookHeader from "../assets/book-header-croppedV2.jpg";
 import FamilyLawCardPhoto from "../assets/family-law-card-photoV2.jpg";
 import RealEstateLawCardPhoto from "../assets/real-estate-card-photoV2.jpg";
 import ImmigrationLawCardPhoto from "../assets/immigration-law-card-photoV2.jpg";
+import NotaryCardPhoto from "../assets/notary-card-photo.jpg";
 import Footer from "../components/Footer";
 import ContactForm from '../components/ContactForm';
 import { useNavigate } from 'react-router-dom';
@@ -76,7 +77,7 @@ export default function Home() {
         </Row>
 
         <Row className="mb-5">
-          <Col lg={4} className='mb-4 grow-hover'>
+          <Col lg={6} xl={3} className='mb-4 grow-hover'>
             <Card className='shadow h-100'>
               <Card.Img variant='top' alt="Real Estate Law" src={RealEstateLawCardPhoto}/>
 
@@ -93,12 +94,16 @@ export default function Home() {
                   Whether you're buying, selling, or have any other questions related to real estate law, we're happy to help!
                 </p>
 
-                <Button onClick={() => {window.scrollTo(0,0); navigate('/practice-areas/real-estate-law')}}className='w-50 fw-bold' variant='primary'>Learn More</Button>
+                
               </Card.Body>
+
+              <Card.Footer className="bg-white border-0">
+                <Button onClick={() => {window.scrollTo(0,0); navigate('/practice-areas/real-estate-law')}}className='w-75 fw-bold' variant='primary'>Learn More</Button>
+              </Card.Footer>
             </Card>
           </Col>
 
-          <Col lg={4} className='mb-4 grow-hover'>
+          <Col lg={6} xl={3} className='mb-4 grow-hover'>
             <Card className='shadow h-100'>
               <Card.Img variant='top' alt="Family Law" src={FamilyLawCardPhoto}/>
 
@@ -114,13 +119,15 @@ export default function Home() {
                 <p>
                   Family can be complicated. Our team of family law experts will support you through any family law situation you may be in.
                 </p>
-
-                <Button onClick={() => {window.scrollTo(0,0); navigate('/practice-areas/family-law')}}className='w-50 fw-bold' variant='primary'>Learn More</Button>
               </Card.Body>
+
+              <Card.Footer className="bg-white border-0">
+                  <Button onClick={() => {window.scrollTo(0,0); navigate('/practice-areas/family-law')}}className='w-75 fw-bold' variant='primary'>Learn More</Button>
+              </Card.Footer>
             </Card>
           </Col>
 
-          <Col lg={4} className='mb-4'>
+          <Col lg={6} xl={3} className='mb-4'>
             <Card className='shadow h-100'>
               <Card.Img variant='top' alt="Immigration Law" src={ImmigrationLawCardPhoto}/>
 
@@ -137,8 +144,37 @@ export default function Home() {
                   Our team of immigration lawyers will help pave the way towards student visas, residency, citezenship, or whatever your immigration goals may be. 
                 </p>
 
-                <Button onClick={() => {window.scrollTo(0,0); navigate('/practice-areas/immigration-law')}}className='w-50 fw-bold' variant='primary'>Learn More</Button>
               </Card.Body>
+
+              <Card.Footer className="bg-white border-0">
+                <Button onClick={() => {window.scrollTo(0,0); navigate('/practice-areas/immigration-law')}}className='w-75 fw-bold' variant='primary'>Learn More</Button>
+              </Card.Footer>
+            </Card>
+          </Col>
+
+          <Col lg={6} xl={3} className='mb-4 grow-hover'>
+            <Card className='shadow h-100'>
+              <Card.Img variant='top' alt="Notary Services" src={NotaryCardPhoto}/>
+
+              {/* <Card.Header className='text-primary'>
+                <h6 className='fw-bold'>Real Estate</h6>
+              </Card.Header> */}
+
+              <Card.Body>
+
+                <Card.Title className='text-primary fw-bold'>
+                  Notary Services
+                </Card.Title>
+                <p>
+                  Need a notary? Look no further! Our professional notary services ensure your documents are legally binding. Our services are fast, reliable, and convenient.
+                </p>
+
+                
+              </Card.Body>
+
+              <Card.Footer className='bg-white border-0'>
+                <Button onClick={() => {window.scrollTo(0,0); navigate('/practice-areas/notary-services')}}className='w-75 fw-bold' variant='primary'>Learn More</Button>
+              </Card.Footer>
             </Card>
           </Col>
         </Row>
@@ -152,7 +188,7 @@ export default function Home() {
 
         <Row className='mb-5'>
           <Col lg={4} className='mb-4'>
-            <Card className='shadow h-100'>
+            <Card className='shadow h-100 p-1'>
 
               <Container>
                 <Row className='d-flex justify-content-center'>
@@ -179,7 +215,7 @@ export default function Home() {
           </Col>
 
           <Col lg={4} className='mb-4'>
-            <Card className='shadow h-100'>
+            <Card className='shadow h-100 p-1'>
 
               <Container>
                 <Row className='d-flex justify-content-center'>
@@ -209,7 +245,7 @@ export default function Home() {
           </Col>
 
           <Col lg={4} className='mb-4 grow-hover'>
-            <Card className='shadow h-100'>
+            <Card className='shadow h-100 p-1'>
 
               <Container>
                 <Row className='d-flex justify-content-center'>

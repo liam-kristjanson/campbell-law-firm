@@ -30,7 +30,7 @@ export default function Immigration(){
 
             <Container>
                 <Row>
-                    <h1 className="text-primary">Immigration Lawyer in Winnipeg, Manitoba</h1>
+                    <h1 className="text-primary">Immigration Lawyer in Canada</h1>
                     <hr/>
                 </Row>
 

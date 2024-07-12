@@ -7,7 +7,7 @@ export default function ContactForm() {
     const [customerName, setCustomerName] = useState<string>("");
     const [customerMessage, setCustomerMessage] = useState<string>("");
 
-    const contactEmail = "example@email.com";
+    const contactEmail = "aisafiade@yahoo.com";
 
     function handleCustomerNameChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
         const newCustomerName = e.target.value;

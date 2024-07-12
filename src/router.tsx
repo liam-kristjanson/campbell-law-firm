@@ -6,6 +6,7 @@ import AboutUs from './routes/AboutUs';
 import RealEstate from './routes/RealEstate';
 import Family from './routes/Family';
 import Immigration from './routes/Immigration';
+import NotaryServices from './routes/NotaryServices';
 
 export const router = createBrowserRouter([
     {
@@ -32,4 +33,8 @@ export const router = createBrowserRouter([
         path: '/practice-areas/immigration-law',
         element: <Immigration/>
     },
+    {
+        path: '/practice-areas/notary-services',
+        element: <NotaryServices />
+    }
 ])

@@ -53,6 +53,11 @@ export default function NavBar(props: NavbarProps) {
           text: "Family Law",
           highlightKey: "/practice-areas/family-law"
         },
+        {
+          route: "/practice-areas/notary-services",
+          text: "Notary Services",
+          highlightKey: "/practice-areas/notary-services"
+        }
       ],
     },
     {

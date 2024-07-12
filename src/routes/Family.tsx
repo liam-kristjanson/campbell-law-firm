@@ -30,7 +30,7 @@ export default function Family(){
             <Container>
 
                 <Row>
-                    <h1 className="text-primary">Family Matters Lawyer in Winnipeg, Manitoba</h1>
+                    <h1 className="text-primary">Family Matters Lawyer in Manitoba</h1>
                     <hr/>
                 </Row>
 
