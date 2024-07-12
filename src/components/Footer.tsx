@@ -32,7 +32,7 @@ return(
                     <ul style={myStyle} className="d-flex flex-column align-items-start ps-0">
                         <li><Icon path={mdiCellphoneBasic} size={1.3} /> 204-291-6312</li>
                         <li><Icon path={mdiFax} size={1.3} /> 204-817-3430</li>
-                        <li><Icon path={mdiEmailFastOutline} size={1.3}/> campbell@example.com</li> 
+                        <li><Icon path={mdiEmailFastOutline} size={1.3}/> aisafiade@yahoo.com</li> 
                         <li><Icon path={mdiMapMarkerRadiusOutline} size={1.3} /> 2-430 River Avenue, Winnipeg, MB R3L 0C6</li>
                     </ul>
                 </Col>

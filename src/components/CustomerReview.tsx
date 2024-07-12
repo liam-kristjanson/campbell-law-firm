@@ -23,7 +23,7 @@ export default function CustomerReview(props: CustomerReviewProps) {
                     <Row>
                     <Col>
                         <p className="fst-italic">
-                            {props.reviewContent}
+                            "{props.reviewContent}"
                         </p>
 
                         {/* <hr/>

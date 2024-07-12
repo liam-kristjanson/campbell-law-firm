@@ -35,7 +35,7 @@ return(
                 <div className="col-8 col">
 
                     <div>
-                        <h3 className=" text-primary"> Welcome to Campbell Law firm </h3> 
+                        <h3 className=" text-primary">About A.L Campbell Law Office</h3> 
                         <p> Founded in 1995, our firm has built a legacy of trust and excellence in providing comprehensive legal services. We specialize in a broad range of practice areas including real estate law, family law, and immigration law. Our dedicated team of seasoned attorneys brings a wealth of experience and a deep understanding of the law to every case, ensuring that our clients receive the highest quality representation.</p>
                     </div>
                     <div className=" pt-4 fw-bolder text-primary">

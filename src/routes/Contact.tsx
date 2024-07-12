@@ -1,5 +1,5 @@
 import Icon from '@mdi/react';
-import { mdiFacebook, mdiFax, mdiHomeCity, mdiPhone, mdiPhoneClassic } from '@mdi/js';
+import { mdiEmailFastOutline, mdiFacebook, mdiFax, mdiHomeCity, mdiPhone, mdiPhoneClassic } from '@mdi/js';
 
 import NavBar from '../components/NavBar';
 import useNavBar from '../components/hooks/useNavBar';
@@ -45,6 +45,7 @@ export default function Contact() {
                         <p><Icon path={mdiHomeCity} size={0.9}/> 2-430 River Avenue, Winnipeg, MB R3L 0C6</p>
                         <p><Icon path={mdiPhone} size={0.9}/> 204-291-6312</p>
                         <p><Icon path={mdiFax} size={0.9}/> 204-817-3430</p>
+                        <Icon path={mdiEmailFastOutline} size={1.3}/> aisafiade@yahoo.com
                     </Col>
                 </Row>
 
