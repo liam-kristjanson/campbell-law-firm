@@ -9,7 +9,7 @@ import { Col, Container, Nav, Row } from 'react-bootstrap';
 import Footer from '../components/Footer';
 
 export default function Contact() {
-    const {showMenu, handleMenuShow, handleMenuHide} = useNavBar();
+    const { showMenu, handleMenuShow, handleMenuHide } = useNavBar();
     const route = "/contact";
 
     return (
@@ -22,10 +22,10 @@ export default function Contact() {
             />
 
             <HeroGraphic
-                    graphicText=' Contact Information'
-                    iconPath={mdiPhoneClassic}
-                    imageSource='telephone-headerV2.jpg'
-                />
+                graphicText='Contact Information'
+                iconPath={mdiPhoneClassic}
+                imageSource='telephone-headerV2.jpg'
+            />
 
             <Container>
                 <Row>
@@ -38,8 +38,7 @@ export default function Contact() {
                 <Row className='mb-4'>
                     <Col xl={8}>
                         <p>
-                            If you have any questions or concerns, make sure to reach out to any of our
-                            staff members using the following information.
+                            If you have any questions or concerns, make sure to reach out to Adeoti or any of our staff members using the following information.
                         </p>
 
                         <p><Icon path={mdiHomeCity} size={0.9}/> 2-430 River Avenue, Winnipeg, MB R3L 0C6</p>
@@ -59,8 +58,7 @@ export default function Contact() {
                 <Row className='mb-4'>
                     <Col xl={8}>
                         <p>
-                            Connect with us on various social media platforms, and hear the testimonies
-                            of the people A.L Campbell Law Office has helped!
+                            Connect with Adeoti and the rest of our team on various social media platforms, and hear the testimonies of the people A.L Campbell Law Office has helped!
                         </p>
                     </Col>
                 </Row>
@@ -75,7 +73,7 @@ export default function Contact() {
                 </Row>
             </Container>
 
-            <Footer/>
+            <Footer />
         </>
     )
 }
